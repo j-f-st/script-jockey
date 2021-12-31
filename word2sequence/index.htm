@@ -15,11 +15,18 @@
   <meta name="description" content="文字を利用してリズムマシン的な遊びが可能です。文字DJ">
   <title>Script_Jockey</title>
   <link rel="shortcut icon" href="img/kaiten_sitefavi.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
   <link href="./index.css" rel="stylesheet">
 
-  <script src="https://cdn.logrocket.io/LogRocket.min.js" crossorigin="anonymous"></script>
-  <script>window.LogRocket && window.LogRocket.init('wki3oq/script_jockey');</script>
+  <link rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin />
+  <link rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
+    media="print" onload="this.media='all'" />
 </head>
 
 <body>
@@ -49,7 +56,7 @@
 	<div class="input_part">
 		<h2 id="input_script"></h2>
 
-		<form method="get" action="datachange.php">
+		<form method="get" action="./datachange.htm">
     		<input type="text" value="" placeholder="Set" name="input_words" pattern="^[ァ-ンヴー]+$">
     		<button type="submit">Play!</button>
   		</form>
@@ -148,49 +155,48 @@
 <h3>© 2019</h3>
 </footer>
 <script>
-  //PHP_musical_scoreに 0,1 情報代入するための処置
-  //
+  // musical_scoreに 0,1 情報代入するための処置
   var element = document.getElementsByTagName('p');
   var style_list = [];
-for(let i=0;i<element.length;i++){
-  var style = (element.currentStyle || document.defaultView.getComputedStyle(element[i], '')).boxShadow; 
-  style_list[i] = style.split('rgb(0, 0, 0) ').join('').split(' 0px 0px').join('');
-  //rgb情報削り,0pxの不要な情報削り
-}
+  for(let i=0;i<element.length;i++){
+    var style = (element.currentStyle || document.defaultView.getComputedStyle(element[i], '')).boxShadow; 
+    style_list[i] = style.split('rgb(0, 0, 0) ').join('').split(' 0px 0px').join('');
+    //rgb情報削り,0pxの不要な情報削り
+  }
 
   //区切り文字に「, 」を指定(該当px縦横情報の切り出し,0,2,4..縦情報1,3,5..横情報)
   var style_list_extra = [];
-for(let i=0;i<element.length;i++){
-  style_list_extra[i] = style_list[i].split(', ').join(' ');
-}
+  for(let i=0;i<element.length;i++){
+    style_list_extra[i] = style_list[i].split(', ').join(' ');
+  }
 
   //オブジェクトへpixelデータ持たせる(新規作成)
   var char_list = [];
   var char_precision; //個々のオブジェクト
   var column_order = []; //縦
   var row_order = []; //横
-for(let i=0;i<style_list_extra.length;i++){
-  char_list[i] = style_list_extra[i].split(' ');
-  column_order[i] = [];
-  row_order[i] = [];
-    for(let n=0;n<char_list[i].length;n++){
-      if(n===0||n%2===0){
-        //px(sliceで後ろから2文字)削除し、8で割った
-        column_order[i].push(char_list[i][n].slice( 0, -2 )/8);
-      } else if(n%2===1){
-        row_order[i].push(char_list[i][n].slice( 0, -2 )/8);
+  for(let i=0;i<style_list_extra.length;i++){
+    char_list[i] = style_list_extra[i].split(' ');
+    column_order[i] = [];
+    row_order[i] = [];
+      for(let n=0;n<char_list[i].length;n++){
+        if(n===0||n%2===0){
+          //px(sliceで後ろから2文字)削除し、8で割った
+          column_order[i].push(char_list[i][n].slice( 0, -2 )/8);
+        } else if(n%2===1){
+          row_order[i].push(char_list[i][n].slice( 0, -2 )/8);
+        }
       }
-    }
-  char_precision = {
-    number:[i],
-    class:element[i].className,
-    column:column_order[i],
-    row:row_order[i],
-    jap_char:element[i].innerHTML,
-    //※innerHTMLカタカナ情報オブジェクト代入(innerHTMLチェンジ関数実行すると動かない)
-  };
-  char_list[i] = char_precision;
-}
+    char_precision = {
+      number:[i],
+      class:element[i].className,
+      column:column_order[i],
+      row:row_order[i],
+      jap_char:element[i].innerHTML,
+      //※innerHTMLカタカナ情報オブジェクト代入(innerHTMLチェンジ関数実行すると動かない)
+    };
+    char_list[i] = char_precision;
+  }
 
 </script>
 </body>
