@@ -19,6 +19,218 @@
   }
 }
 
+#input_script {
+  box-shadow: 28px 7px 0 0 #000, 35px 7px 0 0 #000, 42px 7px 0 0 #000,
+    49px 7px 0 0 #000, 56px 7px 0 0 #000, 63px 7px 0 0 #000, 70px 7px 0 0 #000,
+    77px 7px 0 0 #000, 84px 7px 0 0 #000, 91px 7px 0 0 #000, 98px 7px 0 0 #000,
+    105px 7px 0 0 #000, 112px 7px 0 0 #000, 119px 7px 0 0 #000,
+    126px 7px 0 0 #000, 133px 7px 0 0 #000, 140px 7px 0 0 #000,
+    147px 7px 0 0 #000, 154px 7px 0 0 #000, 161px 7px 0 0 #000,
+    168px 7px 0 0 #000, 175px 7px 0 0 #000, 182px 7px 0 0 #000,
+    189px 7px 0 0 #000, 196px 7px 0 0 #000, 203px 7px 0 0 #000,
+    210px 7px 0 0 #000, 217px 7px 0 0 #000, 224px 7px 0 0 #000,
+    231px 7px 0 0 #000, 238px 7px 0 0 #000, 245px 7px 0 0 #000,
+    252px 7px 0 0 #000, 259px 7px 0 0 #000, 266px 7px 0 0 #000,
+    273px 7px 0 0 #000, 280px 7px 0 0 #000, 287px 7px 0 0 #000,
+    294px 7px 0 0 #000, 301px 7px 0 0 #000, 308px 7px 0 0 #000,
+    315px 7px 0 0 #000, 322px 7px 0 0 #000, 329px 7px 0 0 #000,
+    336px 7px 0 0 #000, 343px 7px 0 0 #000, 350px 7px 0 0 #000,
+    357px 7px 0 0 #000, 364px 7px 0 0 #000, 371px 7px 0 0 #000,
+    378px 7px 0 0 #000, 385px 7px 0 0 #000, 392px 7px 0 0 #000,
+    399px 7px 0 0 #000, 406px 7px 0 0 #000, 413px 7px 0 0 #000,
+    21px 14px 0 0 #000, 28px 14px 0 0 #000, 35px 14px 0 0 #000,
+    413px 14px 0 0 #000, 420px 14px 0 0 #000, 14px 21px 0 0 #000,
+    21px 21px 0 0 #000, 28px 21px 0 0 #000, 413px 21px 0 0 #000,
+    420px 21px 0 0 #000, 7px 28px 0 0 #000, 14px 28px 0 0 #000,
+    413px 28px 0 0 #000, 420px 28px 0 0 #000, 7px 35px 0 0 #000,
+    14px 35px 0 0 #000, 413px 35px 0 0 #000, 420px 35px 0 0 #000,
+    7px 42px 0 0 #000, 14px 42px 0 0 #000, 413px 42px 0 0 #000,
+    420px 42px 0 0 #000, 7px 49px 0 0 #000, 14px 49px 0 0 #000,
+    413px 49px 0 0 #000, 420px 49px 0 0 #000, 7px 56px 0 0 #000,
+    14px 56px 0 0 #000, 413px 56px 0 0 #000, 420px 56px 0 0 #000,
+    7px 63px 0 0 #000, 14px 63px 0 0 #000, 413px 63px 0 0 #000,
+    420px 63px 0 0 #000, 7px 70px 0 0 #000, 14px 70px 0 0 #000,
+    413px 70px 0 0 #000, 420px 70px 0 0 #000, 7px 77px 0 0 #000,
+    14px 77px 0 0 #000, 413px 77px 0 0 #000, 420px 77px 0 0 #000,
+    7px 84px 0 0 #000, 14px 84px 0 0 #000, 413px 84px 0 0 #000,
+    420px 84px 0 0 #000, 7px 91px 0 0 #000, 14px 91px 0 0 #000,
+    399px 91px 0 0 #000, 406px 91px 0 0 #000, 413px 91px 0 0 #000,
+    7px 98px 0 0 #000, 14px 98px 0 0 #000, 392px 98px 0 0 #000,
+    399px 98px 0 0 #000, 406px 98px 0 0 #000, 14px 105px 0 0 #000,
+    21px 105px 0 0 #000, 28px 105px 0 0 #000, 35px 105px 0 0 #000,
+    42px 105px 0 0 #000, 49px 105px 0 0 #000, 56px 105px 0 0 #000,
+    63px 105px 0 0 #000, 70px 105px 0 0 #000, 77px 105px 0 0 #000,
+    84px 105px 0 0 #000, 91px 105px 0 0 #000, 98px 105px 0 0 #000,
+    105px 105px 0 0 #000, 112px 105px 0 0 #000, 119px 105px 0 0 #000,
+    126px 105px 0 0 #000, 133px 105px 0 0 #000, 140px 105px 0 0 #000,
+    147px 105px 0 0 #000, 154px 105px 0 0 #000, 161px 105px 0 0 #000,
+    168px 105px 0 0 #000, 175px 105px 0 0 #000, 182px 105px 0 0 #000,
+    189px 105px 0 0 #000, 196px 105px 0 0 #000, 203px 105px 0 0 #000,
+    210px 105px 0 0 #000, 217px 105px 0 0 #000, 224px 105px 0 0 #000,
+    231px 105px 0 0 #000, 238px 105px 0 0 #000, 245px 105px 0 0 #000,
+    252px 105px 0 0 #000, 259px 105px 0 0 #000, 266px 105px 0 0 #000,
+    273px 105px 0 0 #000, 280px 105px 0 0 #000, 287px 105px 0 0 #000,
+    294px 105px 0 0 #000, 301px 105px 0 0 #000, 308px 105px 0 0 #000,
+    315px 105px 0 0 #000, 322px 105px 0 0 #000, 329px 105px 0 0 #000,
+    336px 105px 0 0 #000, 343px 105px 0 0 #000, 350px 105px 0 0 #000,
+    357px 105px 0 0 #000, 364px 105px 0 0 #000, 371px 105px 0 0 #000,
+    378px 105px 0 0 #000, 385px 105px 0 0 #000, 392px 105px 0 0 #000,
+    399px 105px 0 0 #000;
+  height: 7px;
+  width: 7px;
+}
+
+body {
+  /*全体フォント*/
+  font-family: 'Press Start 2P', 'DotGothic16', cursive;
+
+  margin: 0 auto;
+  width: 600px;
+  /* pixel文字確認用 */
+  /*display: flex;	*/
+  /*flex-wrap: wrap;  */
+
+  position: relative;
+}
+
+h3 {
+  /* <p>の代替 CSSリセット */
+
+  margin: 20px 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: normal;
+  outline: 0;
+  vertical-align: baseline;
+}
+p {
+  margin: 20px 0;
+
+  /*invisibleに
+	innerHTMLが入ってるためdisplaynone はダメ ?*/
+}
+
+/* innerHTML取得用pタグのみ選択(body直下,クラス持ち) */
+body > p[class] {
+  font-size: 25px;
+  font-family: 'DotGothic16', cursive;
+  display: inline-block;
+  margin: 10px 0px;
+}
+/* ｢シ(15),ブ(39),ヤ(62)｣ オレンジへ */
+body > p[class]:nth-child(15),
+p[class]:nth-child(39),
+p[class]:nth-child(62) {
+  color: orange;
+}
+
+/*  logo部 */
+.logo_upper {
+  margin-top: -10px;
+  margin-bottom: 60px;
+  margin-left: -40px;
+
+  position: relative;
+  animation: anime 1s 0s infinite alternate;
+}
+.logo_middle {
+  margin-left: 225px;
+  margin-top: 80px;
+}
+.logo_lower {
+  margin-top: -45px;
+
+  position: relative;
+  animation: anime 3s 0s infinite alternate;
+}
+.logo_upper p[id^='logo_'],
+.logo_middle p[id^='logo_'],
+.logo_lower p[id^='logo_'] {
+  margin: 35px;
+  display: inline-block;
+}
+
+#logo_record {
+  & img {
+    width: 85px;
+    animation: rotate-anime 3s linear infinite;
+  }
+}
+
+/* input部 */
+div.input_part {
+  margin-top: 115px;
+  margin-left: 85px;
+
+  & > form {
+    display: flex;
+    flex-direction: column;
+
+    & > input[type='text'] {
+      font-size: 40px;
+
+      width: 360px;
+      height: 77px;
+      margin-top: -13px;
+      margin-left: 45px;
+      margin-bottom: 45px;
+      padding-top: 5px;
+      border: none;
+      caret-color: transparent;
+      font-family: 'DotGothic16', cursive;
+      text-align: center;
+
+      &:focus {
+        outline-color: #fff;
+        caret-color: #000;
+        &::placeholder {
+          color: transparent;
+        }
+      }
+    }
+
+    & > button[type='submit'] {
+      height: 50px;
+      width: 350px;
+      margin-top: 10px;
+      margin-left: 40px;
+
+      font-family: 'Press Start 2P', cursive;
+      border: none;
+
+      box-shadow: 5px 5px;
+
+      &:focus {
+        outline-color: red;
+      }
+    }
+  }
+}
+
+/* 警告文 */
+div.caution {
+  margin-top: 30px;
+  & > div.caution_sentence {
+    background-color: #eee;
+    & > h3 {
+      margin-left: 35px;
+      & > span {
+        width: 20px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/* フッター */
+footer a {
+  text-decoration: none;
+  border-bottom: 2px solid #05e55c;
+  color: #05e55c;
+  padding-bottom: 2px;
+}
+
+/* ロゴ用 */
 #logo_s {
   box-shadow: 30px 10px 0 0 #000, 40px 10px 0 0 #000, 50px 10px 0 0 #000,
     60px 10px 0 0 #000, 70px 10px 0 0 #000, 80px 10px 0 0 #000,
@@ -215,231 +427,6 @@
   margin-left: 25px;
   position: relative;
   top: 6px;
-}
-
-/* #logo_record {
-  box-shadow: 4px 4px 0 0 #000, 8px 4px 0 0 #000, 12px 4px 0 0 #000, 16px 4px 0 0 #000, 20px 4px 0 0 #000, 24px 4px 0 0 #000, 40px 4px 0 0 #000, 44px 4px 0 0 #000, 48px 4px 0 0 #000, 52px 4px 0 0 #000, 56px 4px 0 0 #000, 60px 4px 0 0 #000, 4px 8px 0 0 #000, 8px 8px 0 0 #000, 12px 8px 0 0 #000, 16px 8px 0 0 #000, 48px 8px 0 0 #000, 52px 8px 0 0 #000, 56px 8px 0 0 #000, 60px 8px 0 0 #000, 4px 12px 0 0 #000, 8px 12px 0 0 #000, 12px 12px 0 0 #000, 20px 12px 0 0 #000, 24px 12px 0 0 #000, 28px 12px 0 0 #000, 52px 12px 0 0 #000, 56px 12px 0 0 #000, 60px 12px 0 0 #000, 4px 16px 0 0 #000, 8px 16px 0 0 #000, 16px 16px 0 0 #000, 20px 16px 0 0 #000, 56px 16px 0 0 #000, 60px 16px 0 0 #000, 4px 20px 0 0 #000, 12px 20px 0 0 #000, 16px 20px 0 0 #000, 24px 20px 0 0 #000, 28px 20px 0 0 #000, 60px 20px 0 0 #000, 4px 24px 0 0 #000, 12px 24px 0 0 #000, 20px 24px 0 0 #000, 24px 24px 0 0 #000, 60px 24px 0 0 #000, 12px 28px 0 0 #000, 20px 28px 0 0 #000, 32px 28px 0 0 #000, 36px 28px 0 0 #000, 28px 32px 0 0 #000, 36px 32px 0 0 #000, 28px 36px 0 0 #000, 32px 36px 0 0 #000, 4px 40px 0 0 #000, 60px 40px 0 0 #000, 4px 44px 0 0 #000, 60px 44px 0 0 #000, 4px 48px 0 0 #000, 8px 48px 0 0 #000, 56px 48px 0 0 #000, 60px 48px 0 0 #000, 4px 52px 0 0 #000, 8px 52px 0 0 #000, 12px 52px 0 0 #000, 52px 52px 0 0 #000, 56px 52px 0 0 #000, 60px 52px 0 0 #000, 4px 56px 0 0 #000, 8px 56px 0 0 #000, 12px 56px 0 0 #000, 16px 56px 0 0 #000, 48px 56px 0 0 #000, 52px 56px 0 0 #000, 56px 56px 0 0 #000, 60px 56px 0 0 #000, 4px 60px 0 0 #000, 8px 60px 0 0 #000, 12px 60px 0 0 #000, 16px 60px 0 0 #000, 20px 60px 0 0 #000, 24px 60px 0 0 #000, 40px 60px 0 0 #000, 44px 60px 0 0 #000, 48px 60px 0 0 #000, 52px 60px 0 0 #000, 56px 60px 0 0 #000, 60px 60px 0 0 #000;
-  height: 4px;
-  width: 4px;
-}
-*/
-
-#input_script {
-  box-shadow: 28px 7px 0 0 #000, 35px 7px 0 0 #000, 42px 7px 0 0 #000,
-    49px 7px 0 0 #000, 56px 7px 0 0 #000, 63px 7px 0 0 #000, 70px 7px 0 0 #000,
-    77px 7px 0 0 #000, 84px 7px 0 0 #000, 91px 7px 0 0 #000, 98px 7px 0 0 #000,
-    105px 7px 0 0 #000, 112px 7px 0 0 #000, 119px 7px 0 0 #000,
-    126px 7px 0 0 #000, 133px 7px 0 0 #000, 140px 7px 0 0 #000,
-    147px 7px 0 0 #000, 154px 7px 0 0 #000, 161px 7px 0 0 #000,
-    168px 7px 0 0 #000, 175px 7px 0 0 #000, 182px 7px 0 0 #000,
-    189px 7px 0 0 #000, 196px 7px 0 0 #000, 203px 7px 0 0 #000,
-    210px 7px 0 0 #000, 217px 7px 0 0 #000, 224px 7px 0 0 #000,
-    231px 7px 0 0 #000, 238px 7px 0 0 #000, 245px 7px 0 0 #000,
-    252px 7px 0 0 #000, 259px 7px 0 0 #000, 266px 7px 0 0 #000,
-    273px 7px 0 0 #000, 280px 7px 0 0 #000, 287px 7px 0 0 #000,
-    294px 7px 0 0 #000, 301px 7px 0 0 #000, 308px 7px 0 0 #000,
-    315px 7px 0 0 #000, 322px 7px 0 0 #000, 329px 7px 0 0 #000,
-    336px 7px 0 0 #000, 343px 7px 0 0 #000, 350px 7px 0 0 #000,
-    357px 7px 0 0 #000, 364px 7px 0 0 #000, 371px 7px 0 0 #000,
-    378px 7px 0 0 #000, 385px 7px 0 0 #000, 392px 7px 0 0 #000,
-    399px 7px 0 0 #000, 406px 7px 0 0 #000, 413px 7px 0 0 #000,
-    21px 14px 0 0 #000, 28px 14px 0 0 #000, 35px 14px 0 0 #000,
-    413px 14px 0 0 #000, 420px 14px 0 0 #000, 14px 21px 0 0 #000,
-    21px 21px 0 0 #000, 28px 21px 0 0 #000, 413px 21px 0 0 #000,
-    420px 21px 0 0 #000, 7px 28px 0 0 #000, 14px 28px 0 0 #000,
-    413px 28px 0 0 #000, 420px 28px 0 0 #000, 7px 35px 0 0 #000,
-    14px 35px 0 0 #000, 413px 35px 0 0 #000, 420px 35px 0 0 #000,
-    7px 42px 0 0 #000, 14px 42px 0 0 #000, 413px 42px 0 0 #000,
-    420px 42px 0 0 #000, 7px 49px 0 0 #000, 14px 49px 0 0 #000,
-    413px 49px 0 0 #000, 420px 49px 0 0 #000, 7px 56px 0 0 #000,
-    14px 56px 0 0 #000, 413px 56px 0 0 #000, 420px 56px 0 0 #000,
-    7px 63px 0 0 #000, 14px 63px 0 0 #000, 413px 63px 0 0 #000,
-    420px 63px 0 0 #000, 7px 70px 0 0 #000, 14px 70px 0 0 #000,
-    413px 70px 0 0 #000, 420px 70px 0 0 #000, 7px 77px 0 0 #000,
-    14px 77px 0 0 #000, 413px 77px 0 0 #000, 420px 77px 0 0 #000,
-    7px 84px 0 0 #000, 14px 84px 0 0 #000, 413px 84px 0 0 #000,
-    420px 84px 0 0 #000, 7px 91px 0 0 #000, 14px 91px 0 0 #000,
-    399px 91px 0 0 #000, 406px 91px 0 0 #000, 413px 91px 0 0 #000,
-    7px 98px 0 0 #000, 14px 98px 0 0 #000, 392px 98px 0 0 #000,
-    399px 98px 0 0 #000, 406px 98px 0 0 #000, 14px 105px 0 0 #000,
-    21px 105px 0 0 #000, 28px 105px 0 0 #000, 35px 105px 0 0 #000,
-    42px 105px 0 0 #000, 49px 105px 0 0 #000, 56px 105px 0 0 #000,
-    63px 105px 0 0 #000, 70px 105px 0 0 #000, 77px 105px 0 0 #000,
-    84px 105px 0 0 #000, 91px 105px 0 0 #000, 98px 105px 0 0 #000,
-    105px 105px 0 0 #000, 112px 105px 0 0 #000, 119px 105px 0 0 #000,
-    126px 105px 0 0 #000, 133px 105px 0 0 #000, 140px 105px 0 0 #000,
-    147px 105px 0 0 #000, 154px 105px 0 0 #000, 161px 105px 0 0 #000,
-    168px 105px 0 0 #000, 175px 105px 0 0 #000, 182px 105px 0 0 #000,
-    189px 105px 0 0 #000, 196px 105px 0 0 #000, 203px 105px 0 0 #000,
-    210px 105px 0 0 #000, 217px 105px 0 0 #000, 224px 105px 0 0 #000,
-    231px 105px 0 0 #000, 238px 105px 0 0 #000, 245px 105px 0 0 #000,
-    252px 105px 0 0 #000, 259px 105px 0 0 #000, 266px 105px 0 0 #000,
-    273px 105px 0 0 #000, 280px 105px 0 0 #000, 287px 105px 0 0 #000,
-    294px 105px 0 0 #000, 301px 105px 0 0 #000, 308px 105px 0 0 #000,
-    315px 105px 0 0 #000, 322px 105px 0 0 #000, 329px 105px 0 0 #000,
-    336px 105px 0 0 #000, 343px 105px 0 0 #000, 350px 105px 0 0 #000,
-    357px 105px 0 0 #000, 364px 105px 0 0 #000, 371px 105px 0 0 #000,
-    378px 105px 0 0 #000, 385px 105px 0 0 #000, 392px 105px 0 0 #000,
-    399px 105px 0 0 #000;
-  height: 7px;
-  width: 7px;
-}
-
-body {
-  /*全体フォント*/
-  font-family: 'Press Start 2P', 'DotGothic16', cursive;
-
-  margin: 0 auto;
-  width: 600px;
-  /* pixel文字確認用 */
-  /*display: flex;	*/
-  /*flex-wrap: wrap;  */
-
-  position: relative;
-}
-
-h3 {
-  /* <p>の代替 CSSリセット */
-
-  margin: 20px 0;
-  padding: 0;
-  font-size: 100%;
-  font-weight: normal;
-  outline: 0;
-  vertical-align: baseline;
-}
-p {
-  margin: 20px 0;
-
-  /*invisibleに
-	innerHTMLが入ってるためdisplaynone はダメ ?*/
-}
-
-/* innerHTML取得用pタグのみ選択(body直下,クラス持ち) */
-body > p[class] {
-  font-size: 25px;
-  font-family: 'DotGothic16', cursive;
-  display: inline-block;
-  margin: 10px 0px;
-}
-/* ｢シ(15),ブ(39),ヤ(62)｣ オレンジへ */
-body > p[class]:nth-child(15),
-p[class]:nth-child(39),
-p[class]:nth-child(62) {
-  color: orange;
-}
-
-/* ------- */
-/*  logo部 */
-/* ------- */
-.logo_upper {
-  margin-top: -10px;
-  margin-bottom: 60px;
-  margin-left: -40px;
-
-  position: relative;
-  animation: anime 1s 0s infinite alternate;
-}
-.logo_middle {
-  margin-left: 225px;
-  margin-top: 80px;
-}
-.logo_lower {
-  margin-top: -45px;
-
-  position: relative;
-  animation: anime 3s 0s infinite alternate;
-}
-.logo_upper p[id^='logo_'],
-.logo_middle p[id^='logo_'],
-.logo_lower p[id^='logo_'] {
-  margin: 35px;
-  display: inline-block;
-}
-
-#logo_record {
-  & img {
-    width: 85px;
-    animation: rotate-anime 3s linear infinite;
-  }
-}
-
-/* ------- */
-/* input部 */
-/* ------- */
-div.input_part {
-  margin-top: 115px;
-  margin-left: 85px;
-}
-div.input_part > form {
-  display: flex;
-  flex-direction: column;
-}
-div.input_part > form > input[type='text'] {
-  font-size: 40px;
-
-  width: 360px;
-  height: 77px;
-  margin-top: -13px;
-  margin-left: 45px;
-  margin-bottom: 45px;
-
-  padding-top: 5px;
-
-  border: none;
-
-  caret-color: transparent;
-  font-family: 'DotGothic16', cursive;
-  text-align: center;
-}
-div.input_part > form > input[type='text']:focus {
-  outline-color: #fff;
-  caret-color: #000;
-}
-div.input_part > form > input[type='text']:focus::placeholder {
-  color: transparent;
-}
-
-div.input_part > form > button[type='submit'] {
-  height: 50px;
-  width: 350px;
-  margin-top: 10px;
-  margin-left: 40px;
-
-  font-family: 'Press Start 2P', cursive;
-  border: none;
-
-  box-shadow: 5px 5px;
-}
-div.input_part > form > button[type='submit']:focus {
-  outline-color: red;
-}
-
-/* ------- */
-/*  警告文 */
-/* ------- */
-div.caution {
-  margin-top: 30px;
-}
-div.caution > div.caution_sentence {
-  background-color: #eee;
-}
-div.caution > div.caution_sentence > h3 {
-  margin-left: 35px;
-}
-div.caution > div.caution_sentence > h3 > span {
-  width: 20px;
-  display: inline-block;
-}
-
-/* ------- */
-/*  フッター  */
-/* ------- */
-footer a {
-  text-decoration: none;
-  border-bottom: 2px solid #05e55c;
-  color: #05e55c;
-  padding-bottom: 2px;
 }
 
 /* TEMP */
