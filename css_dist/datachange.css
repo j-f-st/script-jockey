@@ -1,0 +1,146 @@
+body {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  min-width: 600px;
+  margin: 0;
+}
+div#left_background {
+  order: 0;
+  height: auto;
+  flex: 1;
+}
+div#right_background {
+  order: 2;
+  height: auto;
+  flex: 1;
+}
+
+div.wrap_all {
+  order: 1;
+
+  background-color: #fff;
+
+  /*全体フォント*/
+  font-family: "Press Start 2P", cursive;
+
+  /* form側と同じwidth */
+  width: 600px;
+  margin: 40px 0 auto 0;
+}
+
+/* 文字数カウンター */
+div.information {
+  margin-left: 25px;
+}
+div.information > h1 span {
+  font-family: "DotGothic16", sans-serif;
+}
+div.information div.counter {
+  display: inline-flex;
+}
+div.information div.counter div#count {
+  font-size: 32px;
+  margin-top: 21.5px;
+}
+
+/* 文字配置ビジュアル確認用 */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 8px;
+}
+div[id^="order_"] {
+  width: 192px; /*個別divに対応して可変*/
+
+  /* div上下間隔空け */
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+div[class^="column_"] {
+  display: inline-block;
+  padding: 0;
+}
+
+/* 0,1情報が入っている個別div */
+div.wrapper > div[id^="order_"] > div > div {
+  width: 20px;
+  height: 20px;
+
+  background-color: #444;
+  margin: 1px;
+  border: 1px solid #444;
+  font-size: 8px;
+
+  visibility: hidden; /* 最初は全隠し JSで'1'のみhidden解除 */
+
+  font-family: initial;
+}
+
+/* topページ戻ボタン */
+a.back2top {
+  text-decoration: none;
+  display: block;
+  margin: 30px auto;
+  width: 320px;
+  text-align: center;
+
+  color: red;
+  font-size: 20px;
+}
+a.back2top:active {
+  color: #000;
+}
+a.back2top > span {
+  letter-spacing: -15px;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* トラックリスト */
+div.last_one {
+  width: 190px;
+  height: 190px;
+  margin: auto 0;
+  color: #888;
+  background-color: #ddd;
+}
+div.last_one h2 {
+  font-size: 12px;
+  margin: 14px 0 0 6px;
+  color: #444;
+}
+/* 色渋谷diversityへ */
+div.last_one h2 > i {
+  font-style: inherit;
+}
+div.last_one h2 > i:nth-child(1) {
+  color: #c81e1a;
+}
+div.last_one h2 > i:nth-child(2) {
+  color: #e57923;
+}
+div.last_one h2 > i:nth-child(3) {
+  color: #e7c033;
+}
+div.last_one h2 > i:nth-child(4) {
+  color: #0e823c;
+}
+div.last_one h2 > i:nth-child(5) {
+  color: #1e519a;
+}
+div.last_one h2 > i:nth-child(6) {
+  color: #651d76;
+}
+
+div.last_one ul {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 12px;
+  font-size: 11px;
+  color: #666;
+}
+div.last_one ul > li {
+  margin: 5px 0;
+}

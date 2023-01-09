@@ -357,10 +357,11 @@ p[class]:nth-child(62) {
   display: inline-block;
 }
 
-/* TODO : cssネスティング */
-#logo_record > img {
-  width: 85px;
-  animation: rotate-anime 3s linear infinite;
+#logo_record {
+  & img {
+    width: 85px;
+    animation: rotate-anime 3s linear infinite;
+  }
 }
 
 /* ------- */

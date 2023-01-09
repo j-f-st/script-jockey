@@ -1,0 +1,17 @@
+{
+  "name": "script-jockey",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "watch": "postcss ./css --dir ./css_dist --watch"
+  },
+  "volta": {
+    "node": "16.13.1",
+    "yarn": "1.22.19"
+  },
+  "dependencies": {
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-nesting": "^10.2.0"
+  }
+}
