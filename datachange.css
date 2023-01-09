@@ -1,8 +1,3 @@
-@font-face {
-	font-family: 'MyFont';
-	src: url('font/kkm_analogtv.ttf');
-}
-
 body {
 	display: flex;
 	flex-wrap: nowrap;
@@ -39,7 +34,7 @@ div.information {
 	margin-left: 25px;
 }
 div.information > h1 span {
-	font-family: MyFont;
+	font-family: 'DotGothic16', sans-serif;
 }
 div.information div.counter {
 	display: inline-flex;
