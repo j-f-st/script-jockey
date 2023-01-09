@@ -1,5 +1,4 @@
 {
-  "editor.tabSize": 4,
   // 補完候補の自動表示
   "editor.quickSuggestions": {
     "comments": false, // コメント内では無効
@@ -9,5 +8,6 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   // すべての言語を対象に既定のフォーマッターを設定する場合
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true
 }
