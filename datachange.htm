@@ -10,9 +10,9 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
+      gtag('js', new Date());
 
-      gtag("config", "G-SW4VC77TR1");
+      gtag('config', 'G-SW4VC77TR1');
     </script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,20 +27,19 @@
       href="img/kaiten_sitefavi.ico"
       type="image/x-icon"
     />
-
     <link href="./datachange.css" rel="stylesheet" />
     <script>
       //preload
       //sound インスタンス作成
-      const dir = "sound_files/";
-      const sound_0 = new Audio(dir + "0.mp3");
-      const sound_1 = new Audio(dir + "1.mp3");
-      const sound_2 = new Audio(dir + "2.mp3");
-      const sound_3 = new Audio(dir + "3.mp3");
-      const sound_4 = new Audio(dir + "4.mp3");
-      const sound_5 = new Audio(dir + "5.mp3");
-      const sound_6 = new Audio(dir + "6.mp3");
-      const sound_7 = new Audio(dir + "7.mp3");
+      const dir = 'sound_files/';
+      const sound_0 = new Audio(dir + '0.mp3');
+      const sound_1 = new Audio(dir + '1.mp3');
+      const sound_2 = new Audio(dir + '2.mp3');
+      const sound_3 = new Audio(dir + '3.mp3');
+      const sound_4 = new Audio(dir + '4.mp3');
+      const sound_5 = new Audio(dir + '5.mp3');
+      const sound_6 = new Audio(dir + '6.mp3');
+      const sound_7 = new Audio(dir + '7.mp3');
     </script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -103,120 +102,120 @@
     <!-- wrap_all -->
 
     <script>
-      const inputWords = replaceKanaHalfToFull(getParam("input_words"));
+      const inputWords = replaceKanaHalfToFull(getParam('input_words'));
       const inputWordsLength = inputWords.length;
 
       // URLから'input_words'取る
       function getParam(name, url) {
         if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
           results = regex.exec(url);
         if (!results) return null;
-        if (!results[2]) return "";
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
       }
 
       // 半角→全角(カタカナ)
       function replaceKanaHalfToFull(str) {
         var kanaMap = {
-          ｶﾞ: "ガ",
-          ｷﾞ: "ギ",
-          ｸﾞ: "グ",
-          ｹﾞ: "ゲ",
-          ｺﾞ: "ゴ",
-          ｻﾞ: "ザ",
-          ｼﾞ: "ジ",
-          ｽﾞ: "ズ",
-          ｾﾞ: "ゼ",
-          ｿﾞ: "ゾ",
-          ﾀﾞ: "ダ",
-          ﾁﾞ: "ヂ",
-          ﾂﾞ: "ヅ",
-          ﾃﾞ: "デ",
-          ﾄﾞ: "ド",
-          ﾊﾞ: "バ",
-          ﾋﾞ: "ビ",
-          ﾌﾞ: "ブ",
-          ﾍﾞ: "ベ",
-          ﾎﾞ: "ボ",
-          ﾊﾟ: "パ",
-          ﾋﾟ: "ピ",
-          ﾌﾟ: "プ",
-          ﾍﾟ: "ペ",
-          ﾎﾟ: "ポ",
-          ｳﾞ: "ヴ",
-          ﾜﾞ: "ヷ",
-          ｦﾞ: "ヺ",
-          ｱ: "ア",
-          ｲ: "イ",
-          ｳ: "ウ",
-          ｴ: "エ",
-          ｵ: "オ",
-          ｶ: "カ",
-          ｷ: "キ",
-          ｸ: "ク",
-          ｹ: "ケ",
-          ｺ: "コ",
-          ｻ: "サ",
-          ｼ: "シ",
-          ｽ: "ス",
-          ｾ: "セ",
-          ｿ: "ソ",
-          ﾀ: "タ",
-          ﾁ: "チ",
-          ﾂ: "ツ",
-          ﾃ: "テ",
-          ﾄ: "ト",
-          ﾅ: "ナ",
-          ﾆ: "ニ",
-          ﾇ: "ヌ",
-          ﾈ: "ネ",
-          ﾉ: "ノ",
-          ﾊ: "ハ",
-          ﾋ: "ヒ",
-          ﾌ: "フ",
-          ﾍ: "ヘ",
-          ﾎ: "ホ",
-          ﾏ: "マ",
-          ﾐ: "ミ",
-          ﾑ: "ム",
-          ﾒ: "メ",
-          ﾓ: "モ",
-          ﾔ: "ヤ",
-          ﾕ: "ユ",
-          ﾖ: "ヨ",
-          ﾗ: "ラ",
-          ﾘ: "リ",
-          ﾙ: "ル",
-          ﾚ: "レ",
-          ﾛ: "ロ",
-          ﾜ: "ワ",
-          ｦ: "ヲ",
-          ﾝ: "ン",
-          ｧ: "ァ",
-          ｨ: "ィ",
-          ｩ: "ゥ",
-          ｪ: "ェ",
-          ｫ: "ォ",
-          ｯ: "ッ",
-          ｬ: "ャ",
-          ｭ: "ュ",
-          ｮ: "ョ",
-          "｡": "。",
-          "､": "、",
-          ｰ: "ー",
-          "｢": "「",
-          "｣": "」",
-          "･": "・",
+          ｶﾞ: 'ガ',
+          ｷﾞ: 'ギ',
+          ｸﾞ: 'グ',
+          ｹﾞ: 'ゲ',
+          ｺﾞ: 'ゴ',
+          ｻﾞ: 'ザ',
+          ｼﾞ: 'ジ',
+          ｽﾞ: 'ズ',
+          ｾﾞ: 'ゼ',
+          ｿﾞ: 'ゾ',
+          ﾀﾞ: 'ダ',
+          ﾁﾞ: 'ヂ',
+          ﾂﾞ: 'ヅ',
+          ﾃﾞ: 'デ',
+          ﾄﾞ: 'ド',
+          ﾊﾞ: 'バ',
+          ﾋﾞ: 'ビ',
+          ﾌﾞ: 'ブ',
+          ﾍﾞ: 'ベ',
+          ﾎﾞ: 'ボ',
+          ﾊﾟ: 'パ',
+          ﾋﾟ: 'ピ',
+          ﾌﾟ: 'プ',
+          ﾍﾟ: 'ペ',
+          ﾎﾟ: 'ポ',
+          ｳﾞ: 'ヴ',
+          ﾜﾞ: 'ヷ',
+          ｦﾞ: 'ヺ',
+          ｱ: 'ア',
+          ｲ: 'イ',
+          ｳ: 'ウ',
+          ｴ: 'エ',
+          ｵ: 'オ',
+          ｶ: 'カ',
+          ｷ: 'キ',
+          ｸ: 'ク',
+          ｹ: 'ケ',
+          ｺ: 'コ',
+          ｻ: 'サ',
+          ｼ: 'シ',
+          ｽ: 'ス',
+          ｾ: 'セ',
+          ｿ: 'ソ',
+          ﾀ: 'タ',
+          ﾁ: 'チ',
+          ﾂ: 'ツ',
+          ﾃ: 'テ',
+          ﾄ: 'ト',
+          ﾅ: 'ナ',
+          ﾆ: 'ニ',
+          ﾇ: 'ヌ',
+          ﾈ: 'ネ',
+          ﾉ: 'ノ',
+          ﾊ: 'ハ',
+          ﾋ: 'ヒ',
+          ﾌ: 'フ',
+          ﾍ: 'ヘ',
+          ﾎ: 'ホ',
+          ﾏ: 'マ',
+          ﾐ: 'ミ',
+          ﾑ: 'ム',
+          ﾒ: 'メ',
+          ﾓ: 'モ',
+          ﾔ: 'ヤ',
+          ﾕ: 'ユ',
+          ﾖ: 'ヨ',
+          ﾗ: 'ラ',
+          ﾘ: 'リ',
+          ﾙ: 'ル',
+          ﾚ: 'レ',
+          ﾛ: 'ロ',
+          ﾜ: 'ワ',
+          ｦ: 'ヲ',
+          ﾝ: 'ン',
+          ｧ: 'ァ',
+          ｨ: 'ィ',
+          ｩ: 'ゥ',
+          ｪ: 'ェ',
+          ｫ: 'ォ',
+          ｯ: 'ッ',
+          ｬ: 'ャ',
+          ｭ: 'ュ',
+          ｮ: 'ョ',
+          '｡': '。',
+          '､': '、',
+          ｰ: 'ー',
+          '｢': '「',
+          '｣': '」',
+          '･': '・',
         };
-        let reg = new RegExp("(" + Object.keys(kanaMap).join("|") + ")", "g");
+        let reg = new RegExp('(' + Object.keys(kanaMap).join('|') + ')', 'g');
         return str
           .replace(reg, function (s) {
             return kanaMap[s];
           })
-          .replace(/ﾞ/g, "゛")
-          .replace(/ﾟ/g, "゜");
+          .replace(/ﾞ/g, '゛')
+          .replace(/ﾟ/g, '゜');
       }
 
       const errorMsgEmptyHTML =
@@ -227,39 +226,39 @@
         '<p style="text-align: center;">You can use only listed カタカナ!<br>リスト内の「カタカナ」のみ使えます</p><a href="index.htm" style="display: block; text-align: center;">back</a>';
       const errorMsgOverLengthHTML =
         '<p style="text-align: center;">Characters limit : 9 CHARs<br>入力可能文字数は9文字までです</p><a href="index.htm" style="display: block; text-align: center;">back</a>';
-      if (inputWords == "") {
-        document.querySelector(".wrap_all").innerHTML = errorMsgEmptyHTML;
+      if (inputWords == '') {
+        document.querySelector('.wrap_all').innerHTML = errorMsgEmptyHTML;
       }
       if (
         /[ガギグゲゴザジズゼゾダヂヅデドバビベボパピプペポヮヵヶヴ]/.test(
           inputWords
         )
       ) {
-        document.querySelector(".wrap_all").innerHTML = errorMsgNotListedHTML;
+        document.querySelector('.wrap_all').innerHTML = errorMsgNotListedHTML;
       }
       if (/[^ァ-ヴー]/.test(inputWords)) {
-        document.querySelector(".wrap_all").innerHTML =
+        document.querySelector('.wrap_all').innerHTML =
           errorMsgInvalidWordsHTML;
       }
       if (inputWordsLength > 9) {
         // 文字数カウント
-        document.querySelector(".wrap_all").innerHTML = errorMsgOverLengthHTML;
+        document.querySelector('.wrap_all').innerHTML = errorMsgOverLengthHTML;
       }
 
-      window.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener('DOMContentLoaded', function () {
         document
-          .getElementById("inputWords")
-          .insertAdjacentText("beforeend", inputWords);
+          .getElementById('inputWords')
+          .insertAdjacentText('beforeend', inputWords);
         document
-          .getElementById("count")
-          .insertAdjacentText("beforeend", inputWordsLength);
+          .getElementById('count')
+          .insertAdjacentText('beforeend', inputWordsLength);
         //147=>左端表示 369=>真ん中表示
         if (
           inputWordsLength === 2 ||
           inputWordsLength === 5 ||
           inputWordsLength === 8
         ) {
-          document.getElementById("positionChanger").remove();
+          document.getElementById('positionChanger').remove();
         }
       });
 
@@ -270,62 +269,62 @@
       const defaultCharJsonArr = [
         {
           number: [0],
-          class: "ptc_a",
+          class: 'ptc_a',
           column: [
             1, 2, 3, 4, 5, 6, 7, 8, 7, 8, 7, 4, 7, 4, 5, 6, 7, 3, 4, 2, 3, 1, 2,
           ],
           row: [
             1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8,
           ],
-          jap_char: "ア",
+          jap_char: 'ア',
         },
         {
           number: [1],
-          class: "ptc_i",
+          class: 'ptc_i',
           column: [
             7, 8, 5, 6, 7, 3, 4, 5, 6, 2, 3, 4, 5, 1, 2, 4, 5, 4, 5, 4, 5, 4, 5,
           ],
           row: [
             1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8,
           ],
-          jap_char: "イ",
+          jap_char: 'イ',
         },
         {
           number: [2],
-          class: "ptc_u",
+          class: 'ptc_u',
           column: [
             4, 5, 4, 5, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 8, 7, 6, 7, 5, 6, 3, 4, 5,
           ],
           row: [
             1, 1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 5, 6, 6, 7, 7, 8, 8, 8,
           ],
-          jap_char: "ウ",
+          jap_char: 'ウ',
         },
         {
           number: [3],
-          class: "ptc_e",
+          class: 'ptc_e',
           column: [
             2, 3, 4, 5, 6, 7, 4, 5, 4, 5, 4, 5, 4, 5, 1, 2, 3, 4, 5, 6, 7, 8,
           ],
           row: [
             2, 2, 2, 2, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7,
           ],
-          jap_char: "エ",
+          jap_char: 'エ',
         },
         {
           number: [4],
-          class: "ptc_o",
+          class: 'ptc_o',
           column: [
             5, 5, 1, 2, 3, 4, 5, 6, 7, 8, 4, 5, 3, 4, 5, 1, 2, 3, 5, 1, 5, 5,
           ],
           row: [
             1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8,
           ],
-          jap_char: "オ",
+          jap_char: 'オ',
         },
         {
           number: [5],
-          class: "ptc_ka",
+          class: 'ptc_ka',
           column: [
             4, 5, 4, 5, 2, 3, 4, 5, 6, 7, 8, 4, 5, 7, 8, 4, 5, 7, 8, 3, 4, 7, 2,
             3, 6, 7, 1, 2, 5, 6,
@@ -334,34 +333,34 @@
             1, 1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 7,
             7, 7, 7, 8, 8, 8, 8,
           ],
-          jap_char: "カ",
+          jap_char: 'カ',
         },
         {
           number: [6],
-          class: "ptc_ki",
+          class: 'ptc_ki',
           column: [4, 4, 2, 3, 4, 5, 6, 7, 4, 5, 2, 3, 4, 5, 6, 7, 5, 5, 5],
           row: [1, 2, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5, 5, 5, 5, 5, 6, 7, 8],
-          jap_char: "キ",
+          jap_char: 'キ',
         },
         {
           number: [7],
-          class: "ptc_ku",
+          class: 'ptc_ku',
           column: [
             4, 5, 6, 7, 8, 3, 4, 7, 8, 3, 7, 2, 3, 6, 7, 5, 6, 4, 5, 3, 4,
           ],
           row: [2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8],
-          jap_char: "ク",
+          jap_char: 'ク',
         },
         {
           number: [8],
-          class: "ptc_ke",
+          class: 'ptc_ke',
           column: [3, 3, 3, 4, 5, 6, 7, 8, 2, 3, 5, 6, 1, 2, 5, 4, 5, 4, 3, 4],
           row: [1, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 6, 6, 7, 8, 8],
-          jap_char: "ケ",
+          jap_char: 'ケ',
         },
         {
           number: [9],
-          class: "ptc_ko",
+          class: 'ptc_ko',
           column: [
             1, 2, 3, 4, 5, 6, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 1, 2, 3, 4, 5, 6, 7,
             8,
@@ -370,18 +369,18 @@
             2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7, 7,
             7,
           ],
-          jap_char: "コ",
+          jap_char: 'コ',
         },
         {
           number: [10],
-          class: "ptc_sa",
+          class: 'ptc_sa',
           column: [3, 6, 3, 6, 1, 2, 3, 4, 5, 6, 7, 8, 3, 6, 5, 6, 5, 4, 5],
           row: [2, 2, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 6, 6, 7, 8, 8],
-          jap_char: "サ",
+          jap_char: 'サ',
         },
         {
           number: [11],
-          class: "ptc_si",
+          class: 'ptc_si',
           column: [
             1, 2, 2, 3, 4, 8, 5, 8, 1, 2, 8, 2, 3, 4, 7, 8, 6, 7, 5, 6, 2, 3, 4,
             5,
@@ -390,11 +389,11 @@
             1, 1, 2, 2, 2, 2, 3, 3, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8,
             8,
           ],
-          jap_char: "シ",
+          jap_char: 'シ',
         },
         {
           number: [12],
-          class: "ptc_su",
+          class: 'ptc_su',
           column: [
             1, 2, 3, 4, 5, 6, 7, 8, 7, 8, 6, 7, 5, 6, 4, 5, 6, 7, 2, 3, 7, 8, 1,
             2, 8,
@@ -403,29 +402,29 @@
             2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8,
             8, 8,
           ],
-          jap_char: "ス",
+          jap_char: 'ス',
         },
         {
           number: [13],
-          class: "ptc_se",
+          class: 'ptc_se',
           column: [
             3, 3, 1, 2, 3, 4, 5, 6, 7, 8, 3, 7, 8, 3, 6, 3, 3, 4, 4, 5, 6, 7, 8,
           ],
           row: [
             1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 5, 5, 6, 7, 7, 8, 8, 8, 8, 8,
           ],
-          jap_char: "セ",
+          jap_char: 'セ',
         },
         {
           number: [14],
-          class: "ptc_so",
+          class: 'ptc_so',
           column: [2, 7, 8, 2, 3, 7, 3, 7, 3, 4, 6, 7, 6, 5, 6, 3, 4, 5],
           row: [2, 2, 2, 3, 3, 3, 4, 4, 5, 5, 5, 5, 6, 7, 7, 8, 8, 8],
-          jap_char: "ソ",
+          jap_char: 'ソ',
         },
         {
           number: [15],
-          class: "ptc_ta",
+          class: 'ptc_ta',
           column: [
             3, 3, 4, 5, 2, 3, 5, 6, 7, 1, 2, 3, 7, 8, 1, 3, 4, 6, 7, 4, 5, 6, 3,
             4, 5, 2, 3,
@@ -434,55 +433,55 @@
             1, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 7,
             7, 7, 8, 8,
           ],
-          jap_char: "タ",
+          jap_char: 'タ',
         },
         {
           number: [16],
-          class: "ptc_ti",
+          class: 'ptc_ti',
           column: [
             5, 6, 3, 4, 5, 5, 7, 8, 4, 5, 6, 7, 1, 2, 3, 4, 5, 4, 5, 4, 3,
           ],
           row: [1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 7, 8],
-          jap_char: "チ",
+          jap_char: 'チ',
         },
         {
           number: [17],
-          class: "ptc_tu",
+          class: 'ptc_tu',
           column: [2, 5, 8, 2, 5, 8, 2, 5, 8, 2, 5, 7, 8, 7, 6, 7, 6, 5],
           row: [1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 6, 6, 7, 8],
-          jap_char: "ツ",
+          jap_char: 'ツ',
         },
         {
           number: [18],
-          class: "ptc_te",
+          class: 'ptc_te',
           column: [2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 8, 5, 5, 4, 5, 3, 4],
           row: [2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6, 7, 7, 8, 8],
-          jap_char: "テ",
+          jap_char: 'テ',
         },
         {
           number: [19],
-          class: "ptc_to",
+          class: 'ptc_to',
           column: [3, 3, 3, 3, 4, 3, 4, 5, 3, 6, 3, 3],
           row: [1, 2, 3, 4, 4, 5, 5, 5, 6, 6, 7, 8],
-          jap_char: "ト",
+          jap_char: 'ト',
         },
         {
           number: [20],
-          class: "ptc_na",
+          class: 'ptc_na',
           column: [5, 5, 5, 2, 3, 4, 5, 6, 7, 5, 4, 5, 3, 4, 2, 3],
           row: [1, 2, 3, 4, 4, 4, 4, 4, 4, 5, 6, 6, 7, 7, 8, 8],
-          jap_char: "ナ",
+          jap_char: 'ナ',
         },
         {
           number: [21],
-          class: "ptc_ni",
+          class: 'ptc_ni',
           column: [3, 4, 5, 6, 2, 3, 4, 5, 6, 7],
           row: [3, 3, 3, 3, 7, 7, 7, 7, 7, 7],
-          jap_char: "ニ",
+          jap_char: 'ニ',
         },
         {
           number: [22],
-          class: "ptc_nu",
+          class: 'ptc_nu',
           column: [
             1, 2, 3, 4, 5, 6, 7, 6, 7, 2, 3, 5, 6, 3, 4, 5, 3, 4, 5, 6, 2, 3, 6,
             7, 1, 2,
@@ -491,11 +490,11 @@
             2, 2, 2, 2, 2, 2, 2, 3, 3, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7,
             7, 8, 8,
           ],
-          jap_char: "ヌ",
+          jap_char: 'ヌ',
         },
         {
           number: [23],
-          class: "ptc_ne",
+          class: 'ptc_ne',
           column: [
             4, 5, 4, 5, 1, 2, 3, 4, 5, 6, 7, 8, 6, 7, 4, 5, 6, 3, 4, 5, 6, 1, 2,
             4, 5, 7, 8, 1, 4, 5, 8,
@@ -504,25 +503,25 @@
             1, 1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7,
             7, 7, 7, 7, 8, 8, 8, 8,
           ],
-          jap_char: "ネ",
+          jap_char: 'ネ',
         },
         {
           number: [24],
-          class: "ptc_no",
+          class: 'ptc_no',
           column: [7, 7, 6, 7, 6, 5, 6, 4, 5, 3, 4, 1, 2, 3],
           row: [1, 2, 3, 3, 4, 5, 5, 6, 6, 7, 7, 8, 8, 8],
-          jap_char: "ノ",
+          jap_char: 'ノ',
         },
         {
           number: [25],
-          class: "ptc_ha",
+          class: 'ptc_ha',
           column: [3, 6, 3, 6, 3, 6, 2, 3, 6, 7, 1, 2, 7, 8, 1, 8],
           row: [2, 2, 3, 3, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7],
-          jap_char: "ハ",
+          jap_char: 'ハ',
         },
         {
           number: [26],
-          class: "ptc_hi",
+          class: 'ptc_hi',
           column: [
             2, 3, 2, 3, 8, 2, 3, 6, 7, 2, 3, 4, 5, 6, 2, 3, 2, 3, 2, 3, 3, 4, 5,
             6, 7, 8,
@@ -531,27 +530,27 @@
             1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 8,
             8, 8, 8,
           ],
-          jap_char: "ヒ",
+          jap_char: 'ヒ',
         },
         {
           number: [27],
-          class: "ptc_hu",
+          class: 'ptc_hu',
           column: [
             1, 2, 3, 4, 5, 6, 7, 8, 7, 8, 6, 7, 5, 6, 4, 5, 3, 4, 1, 2, 3,
           ],
           row: [2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 8],
-          jap_char: "フ",
+          jap_char: 'フ',
         },
         {
           number: [28],
-          class: "ptc_he",
+          class: 'ptc_he',
           column: [3, 4, 2, 3, 4, 5, 1, 2, 5, 6, 6, 7, 7, 8, 8],
           row: [2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 6, 6, 7],
-          jap_char: "ヘ",
+          jap_char: 'ヘ',
         },
         {
           number: [29],
-          class: "ptc_ho",
+          class: 'ptc_ho',
           column: [
             4, 5, 4, 5, 1, 2, 3, 4, 5, 6, 7, 8, 4, 5, 2, 4, 5, 7, 1, 2, 4, 5, 7,
             8, 1, 4, 5, 8, 4, 5,
@@ -560,51 +559,51 @@
             1, 1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 6,
             6, 7, 7, 7, 7, 8, 8,
           ],
-          jap_char: "ホ",
+          jap_char: 'ホ',
         },
         {
           number: [30],
-          class: "ptc_ma",
+          class: 'ptc_ma',
           column: [
             1, 2, 3, 4, 5, 6, 7, 8, 7, 8, 7, 2, 3, 5, 6, 3, 4, 5, 4, 5, 5, 6, 7,
           ],
           row: [
             2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8, 8,
           ],
-          jap_char: "マ",
+          jap_char: 'マ',
         },
         {
           number: [31],
-          class: "ptc_mi",
+          class: 'ptc_mi',
           column: [
             2, 3, 3, 4, 5, 6, 6, 7, 3, 4, 4, 5, 6, 2, 2, 3, 4, 5, 5, 6, 7, 8,
           ],
           row: [
             1, 1, 2, 2, 2, 2, 3, 3, 4, 4, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8, 8, 8,
           ],
-          jap_char: "ミ",
+          jap_char: 'ミ',
         },
         {
           number: [32],
-          class: "ptc_mu",
+          class: 'ptc_mu',
           column: [
             4, 4, 3, 4, 3, 2, 3, 6, 7, 2, 7, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 8,
           ],
           row: [
             1, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8,
           ],
-          jap_char: "ム",
+          jap_char: 'ム',
         },
         {
           number: [33],
-          class: "ptc_me",
+          class: 'ptc_me',
           column: [6, 6, 2, 3, 6, 4, 5, 6, 5, 6, 7, 4, 7, 8, 3, 4, 1, 2, 3],
           row: [1, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8, 8],
-          jap_char: "メ",
+          jap_char: 'メ',
         },
         {
           number: [34],
-          class: "ptc_mo",
+          class: 'ptc_mo',
           column: [
             2, 3, 4, 5, 6, 7, 4, 4, 1, 2, 3, 4, 5, 6, 7, 8, 4, 4, 4, 5, 5, 6, 7,
             8,
@@ -613,11 +612,11 @@
             1, 1, 1, 1, 1, 1, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6, 7, 7, 8, 8, 8,
             8,
           ],
-          jap_char: "モ",
+          jap_char: 'モ',
         },
         {
           number: [35],
-          class: "ptc_ya",
+          class: 'ptc_ya',
           column: [
             1, 1, 2, 8, 2, 3, 5, 6, 7, 8, 2, 3, 4, 5, 7, 8, 1, 2, 3, 4, 7, 4, 5,
             5, 5, 6,
@@ -626,20 +625,20 @@
             1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6,
             7, 8, 8,
           ],
-          jap_char: "ヤ",
+          jap_char: 'ヤ',
         },
         {
           number: [36],
-          class: "ptc_yu",
+          class: 'ptc_yu',
           column: [
             2, 3, 4, 5, 6, 7, 7, 7, 6, 7, 6, 5, 6, 1, 2, 3, 4, 5, 6, 7, 8,
           ],
           row: [2, 2, 2, 2, 2, 2, 3, 4, 5, 5, 6, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8],
-          jap_char: "ユ",
+          jap_char: 'ユ',
         },
         {
           number: [37],
-          class: "ptc_yo",
+          class: 'ptc_yo',
           column: [
             2, 3, 4, 5, 6, 7, 8, 8, 8, 3, 4, 5, 6, 7, 8, 8, 8, 8, 2, 3, 4, 5, 6,
             7, 8,
@@ -648,45 +647,45 @@
             1, 1, 1, 1, 1, 1, 1, 2, 3, 4, 4, 4, 4, 4, 4, 5, 6, 7, 8, 8, 8, 8, 8,
             8, 8,
           ],
-          jap_char: "ヨ",
+          jap_char: 'ヨ',
         },
         {
           number: [38],
-          class: "ptc_ra",
+          class: 'ptc_ra',
           column: [
             3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 7, 8, 7, 8, 7, 6, 7, 5, 6, 2, 3, 4, 5,
           ],
           row: [
             1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5, 6, 6, 7, 7, 8, 8, 8, 8,
           ],
-          jap_char: "ラ",
+          jap_char: 'ラ',
         },
         {
           number: [39],
-          class: "ptc_ri",
+          class: 'ptc_ri',
           column: [3, 6, 3, 6, 3, 6, 3, 6, 5, 6, 4, 5, 3, 4],
           row: [2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8],
-          jap_char: "リ",
+          jap_char: 'リ',
         },
         {
           number: [40],
-          class: "ptc_ru",
+          class: 'ptc_ru',
           column: [
             5, 3, 5, 3, 5, 3, 5, 3, 5, 2, 3, 5, 8, 1, 2, 5, 7, 8, 1, 5, 6,
           ],
           row: [1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7, 8, 8, 8],
-          jap_char: "ル",
+          jap_char: 'ル',
         },
         {
           number: [41],
-          class: "ptc_re",
+          class: 'ptc_re',
           column: [3, 3, 3, 3, 3, 8, 3, 7, 8, 3, 4, 5, 6, 7, 3, 4, 5, 6],
           row: [1, 2, 3, 4, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7, 8, 8, 8, 8],
-          jap_char: "レ",
+          jap_char: 'レ',
         },
         {
           number: [42],
-          class: "ptc_ro",
+          class: 'ptc_ro',
           column: [
             1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 7, 8, 1, 2, 7,
             8, 1, 2, 7, 8, 1, 2, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6,
@@ -697,11 +696,11 @@
             4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8,
             8, 8,
           ],
-          jap_char: "ロ",
+          jap_char: 'ロ',
         },
         {
           number: [43],
-          class: "ptc_wa",
+          class: 'ptc_wa',
           column: [
             1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 8, 1, 2, 8, 1, 2, 8, 7, 8, 7, 5, 6, 7,
             2, 3, 4, 5,
@@ -710,22 +709,22 @@
             1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 6, 7, 7, 7,
             8, 8, 8, 8,
           ],
-          jap_char: "ワ",
+          jap_char: 'ワ',
         },
         {
           number: [44],
-          class: "ptc_wi",
+          class: 'ptc_wi',
           column: [
             6, 6, 2, 3, 4, 5, 6, 7, 3, 6, 3, 6, 1, 2, 3, 4, 5, 6, 7, 8, 6, 6,
           ],
           row: [
             1, 2, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8,
           ],
-          jap_char: "ヰ",
+          jap_char: 'ヰ',
         },
         {
           number: [45],
-          class: "ptc_we",
+          class: 'ptc_we',
           column: [
             2, 3, 4, 5, 6, 7, 8, 8, 5, 7, 8, 5, 6, 7, 5, 5, 1, 2, 3, 4, 5, 6, 7,
             8,
@@ -734,11 +733,11 @@
             1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 4, 4, 4, 5, 6, 7, 7, 7, 7, 7, 7, 7,
             7,
           ],
-          jap_char: "ヱ",
+          jap_char: 'ヱ',
         },
         {
           number: [46],
-          class: "ptc_wo",
+          class: 'ptc_wo',
           column: [
             1, 2, 3, 4, 5, 6, 7, 8, 8, 2, 3, 4, 5, 6, 7, 8, 7, 6, 7, 5, 6, 4, 5,
             2, 3, 4,
@@ -747,95 +746,96 @@
             1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 4, 5, 5, 6, 6, 7, 7,
             8, 8, 8,
           ],
-          jap_char: "ヲ",
+          jap_char: 'ヲ',
         },
         {
           number: [47],
-          class: "ptc_nn",
+          class: 'ptc_nn',
           column: [
             8, 1, 2, 3, 8, 3, 4, 5, 8, 8, 7, 8, 4, 5, 6, 7, 1, 2, 3, 4, 5,
           ],
           row: [2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 8],
-          jap_char: "ン",
+          jap_char: 'ン',
         },
         {
           number: [48],
-          class: "ptc_long",
+          class: 'ptc_long',
           column: [8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8],
           row: [3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5],
-          jap_char: "ー",
+          jap_char: 'ー',
         },
         {
           number: [49],
-          class: "ptc_m_a",
+          class: 'ptc_m_a',
           column: [4, 5, 6, 7, 8, 6, 8, 6, 7, 8, 5, 6, 4, 5],
           row: [4, 4, 4, 4, 4, 5, 5, 6, 6, 6, 7, 7, 8, 8],
-          jap_char: "ァ",
+          jap_char: 'ァ',
         },
         {
           number: [50],
-          class: "ptc_m_i",
+          class: 'ptc_m_i',
           column: [7, 8, 6, 7, 5, 6, 7, 4, 5, 7, 7],
           row: [4, 4, 5, 5, 6, 6, 6, 7, 7, 7, 8],
-          jap_char: "ィ",
+          jap_char: 'ィ',
         },
         {
           number: [51],
-          class: "ptc_m_u",
+          class: 'ptc_m_u',
           column: [6, 4, 5, 6, 7, 8, 4, 7, 8, 6, 7, 5, 6],
           row: [4, 5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8],
-          jap_char: "ゥ",
+          jap_char: 'ゥ',
         },
         {
           number: [52],
-          class: "ptc_m_e",
+          class: 'ptc_m_e',
           column: [4, 5, 6, 7, 8, 6, 6, 4, 5, 6, 7, 8],
           row: [5, 5, 5, 5, 5, 6, 7, 8, 8, 8, 8, 8],
-          jap_char: "ェ",
+          jap_char: 'ェ',
         },
         {
           number: [53],
-          class: "ptc_m_o",
+          class: 'ptc_m_o',
           column: [7, 4, 5, 6, 7, 8, 5, 6, 7, 5, 7, 4, 5, 7],
           row: [4, 5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8, 8],
-          jap_char: "ォ",
+          jap_char: 'ォ',
         },
         {
           number: [54],
-          class: "ptc_m_tu",
+          class: 'ptc_m_tu',
           column: [4, 6, 8, 4, 6, 8, 8, 7],
           row: [5, 5, 5, 6, 6, 6, 7, 8],
-          jap_char: "ッ",
+          jap_char: 'ッ',
         },
         {
           number: [55],
-          class: "ptc_m_ya",
+          class: 'ptc_m_ya',
           column: [5, 4, 5, 6, 7, 8, 5, 8, 5, 7, 5],
           row: [4, 5, 5, 5, 5, 5, 6, 6, 7, 7, 8],
-          jap_char: "ャ",
+          jap_char: 'ャ',
         },
         {
           number: [56],
-          class: "ptc_m_yu",
+          class: 'ptc_m_yu',
           column: [4, 5, 6, 7, 7, 7, 4, 5, 6, 7, 8],
           row: [5, 5, 5, 5, 6, 7, 8, 8, 8, 8, 8],
-          jap_char: "ュ",
+          jap_char: 'ュ',
         },
         {
           number: [57],
-          class: "ptc_m_yo",
+          class: 'ptc_m_yo',
           column: [5, 6, 7, 8, 8, 5, 6, 7, 8, 8, 5, 6, 7, 8],
           row: [4, 4, 4, 4, 5, 6, 6, 6, 6, 7, 8, 8, 8, 8],
-          jap_char: "ョ",
+          jap_char: 'ョ',
         },
         {
           number: [58],
-          class: "ptc_bu",
+          class: 'ptc_bu',
           column: [7, 6, 8, 1, 2, 3, 4, 5, 7, 5, 5, 4, 5, 3, 4, 1, 2, 3],
           row: [1, 2, 2, 3, 3, 3, 3, 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 8],
-          jap_char: "ブ",
+          jap_char: 'ブ',
         },
       ];
+
       /* json構造
 		array() { 
 		[0]=> array(5) { 
@@ -855,17 +855,17 @@
 
         const beatChar = [];
         const musicalScore = [];
-        inputWords.split("").forEach((word, index) => {
+        inputWords.split('').forEach((word, index) => {
           beatChar[index] = word;
           musicalScore[index] = [
-            ["", "", "", "", "", "", "", ""], // 8px
-            ["", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", ""],
+            ['', '', '', '', '', '', '', ''], // 8px
+            ['', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', ''],
           ];
           tmpSoundScore[index] = [beatChar[index], musicalScore[index]];
         });
@@ -889,12 +889,12 @@
         for (let i = 0; i < arr[2].row.length; i++) {
           const rowANum = arr[2].row[i];
           const columnANum = arr[2].column[i];
-          arr[1][rowANum - 1][columnANum - 1] = "1";
+          arr[1][rowANum - 1][columnANum - 1] = '1';
         }
       }
 
       function getVisualizedHTML(soundScore) {
-        let HTML = "";
+        let HTML = '';
         soundScore.forEach((score, i) => {
           HTML += '<div id="order_' + i + '">';
           for (let x = 0; x < 8; x++) {
@@ -902,20 +902,20 @@
             for (let y = 0; y < 8; y++) {
               HTML += '<div class="column_' + y + '">';
               HTML += score[1][x][y];
-              if (score[1][x][y] === "") HTML += "0";
-              HTML += "</div>";
+              if (score[1][x][y] === '') HTML += '0';
+              HTML += '</div>';
             }
-            HTML += "</div>";
+            HTML += '</div>';
           }
-          HTML += "</div><br>";
+          HTML += '</div><br>';
         });
         return HTML;
       }
 
-      window.addEventListener("load", function () {
+      window.addEventListener('load', function () {
         document
-          .querySelector(".wrapper")
-          .insertAdjacentHTML("beforeend", getVisualizedHTML(soundScore));
+          .querySelector('.wrapper')
+          .insertAdjacentHTML('beforeend', getVisualizedHTML(soundScore));
         // order順にcolumn0~7を順番に動かせばよい
         for (let i = 0; i < inputWordsLength; i++) {
           //order順
@@ -923,17 +923,17 @@
           /* グローバルに設定しちゃってるので何とかしたい！！ */
 
           eval(
-            "words_order_" + i + " = document.getElementById('order_" + i + "')"
+            'words_order_' + i + " = document.getElementById('order_" + i + "')"
           );
           for (let j = 0; j < 8; j++) {
             //order順
             //music_order_にcolumnを代入してゆく
             eval(
-              "music_order_" +
+              'music_order_' +
                 (function () {
                   return j + 8 * i;
                 })() +
-                " = words_order_" +
+                ' = words_order_' +
                 i +
                 ".getElementsByClassName('column_" +
                 j +
@@ -963,25 +963,25 @@
       //同じ拍目を鳴らしたりするモジュール
       function sameColumnSounds(num) {
         for (let j = 0; j < 8; j++) {
-          if (eval("music_order_" + num + "[" + j + "].innerHTML == '1'")) {
-            eval("sound_" + j + ".play()");
+          if (eval('music_order_' + num + '[' + j + "].innerHTML == '1'")) {
+            eval('sound_' + j + '.play()');
 
-            eval("music_order_" + num + "[" + j + "].innerHTML = '　'"); //空文字
+            eval('music_order_' + num + '[' + j + "].innerHTML = '　'"); //空文字
             eval(
-              "music_order_" +
+              'music_order_' +
                 num +
-                "[" +
+                '[' +
                 j +
                 "].style = 'visibility: initial;'"
             );
             //visibility:hidden解除
           }
-          if (eval("music_order_" + num + "[" + j + "].innerHTML == '0'")) {
-            eval("music_order_" + num + "[" + j + "].innerHTML = '　'"); //空文字入れてるけど他の文字も表示させられる
+          if (eval('music_order_' + num + '[' + j + "].innerHTML == '0'")) {
+            eval('music_order_' + num + '[' + j + "].innerHTML = '　'"); //空文字入れてるけど他の文字も表示させられる
             eval(
-              "music_order_" +
+              'music_order_' +
                 num +
-                "[" +
+                '[' +
                 j +
                 "].style = 'visibility: initial; background-color: #fff;'"
             );
@@ -993,21 +993,21 @@
       /* 背景処理 */
       /* ------- */
       (function () {
-        const fieldBackBody = document.getElementsByTagName("body");
-        const fieldLeft = document.getElementById("left_background");
-        const fieldRight = document.getElementById("right_background");
+        const fieldBackBody = document.getElementsByTagName('body');
+        const fieldLeft = document.getElementById('left_background');
+        const fieldRight = document.getElementById('right_background');
         const bg = [
-          "img/north_south.png",
-          "img/west_east.png",
-          "img/northwest_southeast.png",
-          "img/northeast_southwest.png",
+          'img/north_south.png',
+          'img/west_east.png',
+          'img/northwest_southeast.png',
+          'img/northeast_southwest.png',
         ];
         const c = Math.floor(Math.random() * bg.length);
         const l = Math.floor(Math.random() * bg.length);
         const r = Math.floor(Math.random() * bg.length);
-        fieldBackBody[0].style.backgroundImage = "url(" + bg[c] + ")";
-        fieldLeft.style.backgroundImage = "url(" + bg[l] + ")";
-        fieldRight.style.backgroundImage = "url(" + bg[r] + ")";
+        fieldBackBody[0].style.backgroundImage = 'url(' + bg[c] + ')';
+        fieldLeft.style.backgroundImage = 'url(' + bg[l] + ')';
+        fieldRight.style.backgroundImage = 'url(' + bg[r] + ')';
       })();
     </script>
   </body>

@@ -10,9 +10,9 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
+      gtag('js', new Date());
 
-      gtag("config", "G-SW4VC77TR1");
+      gtag('config', 'G-SW4VC77TR1');
     </script>
 
     <meta charset="utf-8" />
@@ -195,25 +195,25 @@
     </footer>
     <script>
       // musical_scoreに 0,1 情報代入するための処置
-      var element = document.getElementsByTagName("p");
+      var element = document.getElementsByTagName('p');
       var style_list = [];
       for (let i = 0; i < element.length; i++) {
         var style = (
           element.currentStyle ||
-          document.defaultView.getComputedStyle(element[i], "")
+          document.defaultView.getComputedStyle(element[i], '')
         ).boxShadow;
         style_list[i] = style
-          .split("rgb(0, 0, 0) ")
-          .join("")
-          .split(" 0px 0px")
-          .join("");
+          .split('rgb(0, 0, 0) ')
+          .join('')
+          .split(' 0px 0px')
+          .join('');
         //rgb情報削り,0pxの不要な情報削り
       }
 
       //区切り文字に「, 」を指定(該当px縦横情報の切り出し,0,2,4..縦情報1,3,5..横情報)
       var style_list_extra = [];
       for (let i = 0; i < element.length; i++) {
-        style_list_extra[i] = style_list[i].split(", ").join(" ");
+        style_list_extra[i] = style_list[i].split(', ').join(' ');
       }
 
       //オブジェクトへpixelデータ持たせる(新規作成)
@@ -222,7 +222,7 @@
       var column_order = []; //縦
       var row_order = []; //横
       for (let i = 0; i < style_list_extra.length; i++) {
-        char_list[i] = style_list_extra[i].split(" ");
+        char_list[i] = style_list_extra[i].split(' ');
         column_order[i] = [];
         row_order[i] = [];
         for (let n = 0; n < char_list[i].length; n++) {
