@@ -298,10 +298,6 @@ body {
   position: relative;
 }
 
-h1 {
-  margin: 35px;
-  display: inline-block;
-}
 h3 {
   /* <p>の代替 CSSリセット */
 
@@ -336,7 +332,7 @@ p[class]:nth-child(62) {
 /* ------- */
 /*  logo部 */
 /* ------- */
-div.logo_upper {
+.logo_upper {
   margin-top: -10px;
   margin-bottom: 60px;
   margin-left: -40px;
@@ -344,19 +340,24 @@ div.logo_upper {
   position: relative;
   animation: anime 1s 0s infinite alternate;
 }
-div.logo_middle {
+.logo_middle {
   margin-left: 225px;
   margin-top: 80px;
-  /*position: relative;*/
-  /*animation: rotate-anime 5s linear infinite;*/
-  /*animation: anime 2s 0s infinite alternate;*/
 }
-div.logo_lower {
+.logo_lower {
   margin-top: -45px;
 
   position: relative;
   animation: anime 3s 0s infinite alternate;
 }
+.logo_upper p[id^='logo_'],
+.logo_middle p[id^='logo_'],
+.logo_lower p[id^='logo_'] {
+  margin: 35px;
+  display: inline-block;
+}
+
+/* TODO : cssネスティング */
 #logo_record > img {
   width: 85px;
   animation: rotate-anime 3s linear infinite;
