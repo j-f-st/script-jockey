@@ -5,12 +5,12 @@ body {
   min-width: 600px;
   margin: 0;
 }
-div#left_background {
+.background-left {
   order: 0;
   height: auto;
   flex: 1;
 }
-div#right_background {
+.background-right {
   order: 2;
   height: auto;
   flex: 1;
@@ -22,7 +22,7 @@ div.wrap_all {
   background-color: #fff;
 
   /*全体フォント*/
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
 
   /* form側と同じwidth */
   width: 600px;
@@ -34,7 +34,7 @@ div.information {
   margin-left: 25px;
 }
 div.information > h1 span {
-  font-family: "DotGothic16", sans-serif;
+  font-family: 'DotGothic16', sans-serif;
 }
 div.information div.counter {
   display: inline-flex;
@@ -50,7 +50,7 @@ div.information div.counter div#count {
   flex-wrap: wrap;
   margin: 0 8px;
 }
-div[id^="order_"] {
+div[id^='order_'] {
   width: 192px; /*個別divに対応して可変*/
 
   /* div上下間隔空け */
@@ -58,13 +58,13 @@ div[id^="order_"] {
   margin-bottom: 5px;
 }
 
-div[class^="column_"] {
+div[class^='column_'] {
   display: inline-block;
   padding: 0;
 }
 
 /* 0,1情報が入っている個別div */
-div.wrapper > div[id^="order_"] > div > div {
+div.wrapper > div[id^='order_'] > div > div {
   width: 20px;
   height: 20px;
 

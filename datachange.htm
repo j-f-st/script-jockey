@@ -50,8 +50,8 @@
   </head>
   <body>
     <!-- 背景用ブロック(x2) -->
-    <div id="left_background"></div>
-    <div id="right_background"></div>
+    <div id="js-backgroundLeft" class="background-left"></div>
+    <div id="js-backgroundRight" class="background-right"></div>
 
     <div class="wrap_all">
       <!-- 入力文字 -->
@@ -977,27 +977,7 @@
           }
         }
       }
-
-      /* ------- */
-      /* 背景処理 */
-      /* ------- */
-      (function () {
-        const fieldBackBody = document.getElementsByTagName('body');
-        const fieldLeft = document.getElementById('left_background');
-        const fieldRight = document.getElementById('right_background');
-        const bg = [
-          'img/north_south.png',
-          'img/west_east.png',
-          'img/northwest_southeast.png',
-          'img/northeast_southwest.png',
-        ];
-        const c = Math.floor(Math.random() * bg.length);
-        const l = Math.floor(Math.random() * bg.length);
-        const r = Math.floor(Math.random() * bg.length);
-        fieldBackBody[0].style.backgroundImage = 'url(' + bg[c] + ')';
-        fieldLeft.style.backgroundImage = 'url(' + bg[l] + ')';
-        fieldRight.style.backgroundImage = 'url(' + bg[r] + ')';
-      })();
     </script>
   </body>
+  <script src="./datachange.js"></script>
 </html>
