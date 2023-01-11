@@ -16,7 +16,7 @@ body {
   flex: 1;
 }
 
-div.wrap_all {
+main {
   order: 1;
 
   background-color: #fff;
