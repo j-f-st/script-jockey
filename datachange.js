@@ -134,9 +134,9 @@ function replaceKanaHalfToFull(str) {
 // onload
 win.addEventListener('load', (e) => {
   handleInputError();
-  allStart();
   optimizeGridView();
   randomizeBackgroundView();
+  allStart();
 });
 
 /**
