@@ -46,9 +46,9 @@
         <p id="logo_t"></p>
       </div>
       <div class="logo_middle">
-        <p id="logo_record">
+        <h1 id="logo_record">
           <img src="img/kaiten_logo.png" alt="script-jockey" />
-        </p>
+        </h1>
       </div>
       <div class="logo_lower">
         <p id="logo_j"></p>
@@ -60,9 +60,8 @@
       </div>
     </div>
 
-    <div class="input_part">
-      <h2 id="input_script"></h2>
-
+    <div class="input-part">
+      <p class="input-part__border-view"></p>
       <form method="get" action="./datachange.htm">
         <input
           type="text"
@@ -74,111 +73,113 @@
         <button type="submit">Play!</button>
       </form>
     </div>
-    <!--input_part-->
 
-    <div class="caution">
-      <div class="caution_sentence">
-        <h3
+    <div class="notice">
+      <div class="notice__sentence">
+        <p
+          class="h3-like"
           style="
             color: red;
             font-size: 20px;
             margin: 0 0 30px 0;
             padding-top: 15px;
-            text-align: center;
           "
         >
           Notice
-        </h3>
-        <h3 style="color: red">This content makes some sounds</h3>
-        <h3><span></span>and only works in Google Chrome.</h3>
-        <h3>The maximum number of CHARs : 9</h3>
-        <h3><span></span>(Short word is recommended.)</h3>
-        <h3 style="padding-bottom: 20px">
+        </p>
+        <p class="h3-like" style="color: red">This content makes some sounds</p>
+        <p class="h3-like">　and only works in Google Chrome.</p>
+        <p class="h3-like">The maximum number of CHARs : 9</p>
+        <p class="h3-like">　(Short word is recommended.)</p>
+        <p class="h3-like" style="padding-bottom: 20px">
           You can use only listed "カタカナ".
-        </h3>
+        </p>
       </div>
-      <h3 style="margin: 15px 0 30px 0; text-align: center">↓ List ↓</h3>
     </div>
-    <!--caution-->
 
-    <!--phpでimport?-->
-    <p class="ptc_a">ア</p>
-    <p class="ptc_i">イ</p>
-    <p class="ptc_u">ウ</p>
-    <p class="ptc_e">エ</p>
-    <p class="ptc_o">オ</p>
+    <p class="h3-like" style="margin: 15px 0 30px 0; text-align: center">
+      ↓ List ↓
+    </p>
 
-    <p class="ptc_ka">カ</p>
-    <p class="ptc_ki">キ</p>
-    <p class="ptc_ku">ク</p>
-    <p class="ptc_ke">ケ</p>
-    <p class="ptc_ko">コ</p>
+    <div class="list">
+      <p class="list__item">ア</p>
+      <p class="list__item">イ</p>
+      <p class="list__item">ウ</p>
+      <p class="list__item">エ</p>
+      <p class="list__item">オ</p>
 
-    <p class="ptc_sa">サ</p>
-    <p class="ptc_si">シ</p>
-    <p class="ptc_su">ス</p>
-    <p class="ptc_se">セ</p>
-    <p class="ptc_so">ソ</p>
+      <p class="list__item">カ</p>
+      <p class="list__item">キ</p>
+      <p class="list__item">ク</p>
+      <p class="list__item">ケ</p>
+      <p class="list__item">コ</p>
 
-    <p class="ptc_ta">タ</p>
-    <p class="ptc_ti">チ</p>
-    <p class="ptc_tu">ツ</p>
-    <p class="ptc_te">テ</p>
-    <p class="ptc_to">ト</p>
+      <p class="list__item">サ</p>
+      <p class="list__item list__item--orange">シ</p>
+      <p class="list__item">ス</p>
+      <p class="list__item">セ</p>
+      <p class="list__item">ソ</p>
 
-    <p class="ptc_na">ナ</p>
-    <p class="ptc_ni">ニ</p>
-    <p class="ptc_nu">ヌ</p>
-    <p class="ptc_ne">ネ</p>
-    <p class="ptc_no">ノ</p>
+      <p class="list__item">タ</p>
+      <p class="list__item">チ</p>
+      <p class="list__item">ツ</p>
+      <p class="list__item">テ</p>
+      <p class="list__item">ト</p>
 
-    <p class="ptc_ha">ハ</p>
-    <p class="ptc_hi">ヒ</p>
-    <p class="ptc_hu">フ</p>
-    <p class="ptc_he">ヘ</p>
-    <p class="ptc_ho">ホ</p>
+      <p class="list__item">ナ</p>
+      <p class="list__item">ニ</p>
+      <p class="list__item">ヌ</p>
+      <p class="list__item">ネ</p>
+      <p class="list__item">ノ</p>
 
-    <p class="ptc_ma">マ</p>
-    <p class="ptc_mi">ミ</p>
-    <p class="ptc_mu">ム</p>
-    <p class="ptc_me">メ</p>
-    <p class="ptc_mo">モ</p>
+      <p class="list__item">ハ</p>
+      <p class="list__item">ヒ</p>
+      <p class="list__item">フ</p>
+      <p class="list__item">ヘ</p>
+      <p class="list__item">ホ</p>
 
-    <p class="ptc_ya">ヤ</p>
-    <p class="ptc_yu">ユ</p>
-    <p class="ptc_yo">ヨ</p>
+      <p class="list__item">マ</p>
+      <p class="list__item">ミ</p>
+      <p class="list__item">ム</p>
+      <p class="list__item">メ</p>
+      <p class="list__item">モ</p>
 
-    <p class="ptc_ra">ラ</p>
-    <p class="ptc_ri">リ</p>
-    <p class="ptc_ru">ル</p>
-    <p class="ptc_re">レ</p>
-    <p class="ptc_ro">ロ</p>
+      <p class="list__item list__item--orange">ヤ</p>
+      <p class="list__item">ユ</p>
+      <p class="list__item">ヨ</p>
 
-    <p class="ptc_wa">ワ</p>
-    <p class="ptc_wi">ヰ</p>
-    <p class="ptc_we">ヱ</p>
-    <p class="ptc_wo">ヲ</p>
+      <p class="list__item">ラ</p>
+      <p class="list__item">リ</p>
+      <p class="list__item">ル</p>
+      <p class="list__item">レ</p>
+      <p class="list__item">ロ</p>
 
-    <p class="ptc_nn">ン</p>
-    <p class="ptc_long">ー</p>
+      <p class="list__item">ワ</p>
+      <p class="list__item">ヰ</p>
+      <p class="list__item">ヱ</p>
+      <p class="list__item">ヲ</p>
 
-    <p class="ptc_m_a">ァ</p>
-    <p class="ptc_m_i">ィ</p>
-    <p class="ptc_m_u">ゥ</p>
-    <p class="ptc_m_e">ェ</p>
-    <p class="ptc_m_o">ォ</p>
+      <p class="list__item">ン</p>
+      <p class="list__item">ー</p>
 
-    <p class="ptc_m_tu">ッ</p>
+      <p class="list__item">ァ</p>
+      <p class="list__item">ィ</p>
+      <p class="list__item">ゥ</p>
+      <p class="list__item">ェ</p>
+      <p class="list__item">ォ</p>
 
-    <p class="ptc_m_ya">ャ</p>
-    <p class="ptc_m_yu">ュ</p>
-    <p class="ptc_m_yo">ョ</p>
+      <p class="list__item">ッ</p>
 
-    <p class="ptc_bu">ブ</p>
+      <p class="list__item">ャ</p>
+      <p class="list__item">ュ</p>
+      <p class="list__item">ョ</p>
+
+      <p class="list__item list__item--orange">ブ</p>
+    </div>
 
     <footer style="text-align: center">
-      <h3 style="margin: 5px 0">-------------------</h3>
-      <h3>© 2019</h3>
+      <p class="h3-like" style="margin: 5px 0">-------------------</p>
+      <p class="h3-like">© 2019</p>
     </footer>
   </body>
 </html>
