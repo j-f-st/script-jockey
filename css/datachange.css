@@ -4,6 +4,7 @@ body {
   justify-content: center;
   min-width: 600px;
   margin: 0;
+  font-family: 'Press Start 2P', cursive;
 }
 .background-left {
   order: 0;
@@ -17,31 +18,25 @@ body {
 }
 
 main {
-  order: 1;
-
-  background-color: #fff;
-
-  /*全体フォント*/
-  font-family: 'Press Start 2P', cursive;
-
-  /* form側と同じwidth */
   width: 600px;
-  margin: 40px 0 auto 0;
+  margin: 40px 0 auto;
+  order: 1;
+  background-color: #fff;
 }
 
 /* 文字数カウンター */
-div.information {
+.information {
   margin-left: 25px;
-}
-div.information > h1 span {
-  font-family: 'DotGothic16', sans-serif;
-}
-div.information div.counter {
-  display: inline-flex;
-}
-div.information div.counter div#count {
-  font-size: 32px;
-  margin-top: 21.5px;
+  & h1 span {
+    font-family: 'DotGothic16', sans-serif;
+  }
+  & .counter {
+    display: inline-flex;
+    & #count {
+      font-size: 32px;
+      margin-top: 21.5px;
+    }
+  }
 }
 
 /* 文字配置ビジュアル確認用 */
@@ -88,59 +83,57 @@ a.back2top {
 
   color: red;
   font-size: 20px;
+  & > span {
+    letter-spacing: -15px;
+    display: inline-block;
+    margin-right: 15px;
+  }
 }
 a.back2top:active {
   color: #000;
 }
-a.back2top > span {
-  letter-spacing: -15px;
-  display: inline-block;
-  margin-right: 15px;
-}
 
 /* トラックリスト */
-div.last_one {
+.track-list {
   width: 190px;
   height: 190px;
   margin: auto 0;
   color: #888;
   background-color: #ddd;
-}
-div.last_one h2 {
-  font-size: 12px;
-  margin: 14px 0 0 6px;
-  color: #444;
-}
-/* 色渋谷diversityへ */
-div.last_one h2 > i {
-  font-style: inherit;
-}
-div.last_one h2 > i:nth-child(1) {
-  color: #c81e1a;
-}
-div.last_one h2 > i:nth-child(2) {
-  color: #e57923;
-}
-div.last_one h2 > i:nth-child(3) {
-  color: #e7c033;
-}
-div.last_one h2 > i:nth-child(4) {
-  color: #0e823c;
-}
-div.last_one h2 > i:nth-child(5) {
-  color: #1e519a;
-}
-div.last_one h2 > i:nth-child(6) {
-  color: #651d76;
-}
-
-div.last_one ul {
-  list-style: none;
-  margin-top: 20px;
-  padding-left: 12px;
-  font-size: 11px;
-  color: #666;
-}
-div.last_one ul > li {
-  margin: 5px 0;
+  & h2 {
+    font-size: 12px;
+    margin: 14px 0 0 6px;
+    color: #444;
+    & > i {
+      font-style: inherit;
+    }
+    & > i:nth-child(1) {
+      color: #c81e1a;
+    }
+    & > i:nth-child(2) {
+      color: #e57923;
+    }
+    & > i:nth-child(3) {
+      color: #e7c033;
+    }
+    & > i:nth-child(4) {
+      color: #0e823c;
+    }
+    & > i:nth-child(5) {
+      color: #1e519a;
+    }
+    & > i:nth-child(6) {
+      color: #651d76;
+    }
+  }
+  & ul {
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 12px;
+    font-size: 11px;
+    color: #666;
+    & > li {
+      margin: 5px 0;
+    }
+  }
 }
