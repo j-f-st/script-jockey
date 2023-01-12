@@ -1,15 +1,14 @@
 //sound インスタンス作成
 const dir = 'sound_files/';
-const sound_0 = new Audio(dir + '0.mp3');
-const sound_1 = new Audio(dir + '1.mp3');
-const sound_2 = new Audio(dir + '2.mp3');
-const sound_3 = new Audio(dir + '3.mp3');
-const sound_4 = new Audio(dir + '4.mp3');
-const sound_5 = new Audio(dir + '5.mp3');
-const sound_6 = new Audio(dir + '6.mp3');
-const sound_7 = new Audio(dir + '7.mp3');
+const sound_0 = new Audio(`${dir}0.mp3`);
+const sound_1 = new Audio(`${dir}1.mp3`);
+const sound_2 = new Audio(`${dir}2.mp3`);
+const sound_3 = new Audio(`${dir}3.mp3`);
+const sound_4 = new Audio(`${dir}4.mp3`);
+const sound_5 = new Audio(`${dir}5.mp3`);
+const sound_6 = new Audio(`${dir}6.mp3`);
+const sound_7 = new Audio(`${dir}7.mp3`);
 
-const win = window;
 const d = document;
 const inputWords = replaceKanaHalfToFull(getParam('input_words'));
 const inputWordsLength = inputWords.length;
@@ -132,11 +131,13 @@ function replaceKanaHalfToFull(str) {
 }
 
 // onload
-win.addEventListener('load', (e) => {
+d.addEventListener('DOMContentLoaded', () => {
   handleInputError();
+  showSoundScore();
   optimizeGridView();
+  showInputData();
   randomizeBackgroundView();
-  allStart();
+  play();
 });
 
 /**
@@ -177,19 +178,13 @@ function handleInputError() {
 }
 
 /**
- * 演奏開始用　仮 / 未refactor
+ * 演奏開始
  */
-function allStart() {
-  d.querySelector('.wrapper').insertAdjacentHTML(
-    'beforeend',
-    getVisualizedHTML(getSoundScore(inputWords))
-  );
+function play() {
   // order順にcolumn0~7を順番に動かせばよい
   for (let i = 0; i < inputWordsLength; i++) {
     //order順
-
     /* グローバルに設定しちゃってるので何とかしたい！！ */
-
     eval('words_order_' + i + " = document.getElementById('order_" + i + "')");
     for (let j = 0; j < 8; j++) {
       //order順
@@ -207,92 +202,27 @@ function allStart() {
       );
     }
   }
-  const music_count = inputWordsLength * 8;
-  //演奏開始
-  makeTempo(music_count);
+  const musicCount = inputWordsLength * 8;
+  setTempo(musicCount);
 }
 
 /**
- * 入力された文字をサウンドスコアにマッピングする / 未refactor
+ * テンポ(時間)を設定する
  */
-function getSoundScore(inputWords) {
-  const tmpSoundScore = [];
-
-  const beatChar = [];
-  const musicalScore = [];
-  inputWords.split('').forEach((word, index) => {
-    beatChar[index] = word;
-    musicalScore[index] = [
-      ['', '', '', '', '', '', '', ''], // 8px
-      ['', '', '', '', '', '', '', ''],
-      ['', '', '', '', '', '', '', ''],
-      ['', '', '', '', '', '', '', ''],
-      ['', '', '', '', '', '', '', ''],
-      ['', '', '', '', '', '', '', ''],
-      ['', '', '', '', '', '', '', ''],
-      ['', '', '', '', '', '', '', ''],
-    ];
-    tmpSoundScore[index] = [beatChar[index], musicalScore[index]];
-  });
-
-  //入力された文字とjson(文字リスト)を照合
-  tmpSoundScore.forEach((arr) => {
-    defaultCharJsonArr.forEach((obj) => {
-      if (arr[0] === obj.jap_char) {
-        arr[2] = obj;
-      }
-    });
-  });
-
-  //入力文字数分だけスコアにbeat情報代入
-  tmpSoundScore.forEach((arr) => {
-    for (let i = 0; i < arr[2].row.length; i++) {
-      const rowANum = arr[2].row[i];
-      const columnANum = arr[2].column[i];
-      arr[1][rowANum - 1][columnANum - 1] = '1';
-    }
-  });
-  return tmpSoundScore;
-}
-
-/**
- * soundScoreのデータを受け取ってビジュアライズする / 未refactor
- */
-function getVisualizedHTML(soundScore) {
-  let HTML = '';
-  soundScore.forEach((score, i) => {
-    HTML += '<div id="order_' + i + '">';
-    for (let x = 0; x < 8; x++) {
-      HTML += '<div class="row_' + x + '">';
-      for (let y = 0; y < 8; y++) {
-        HTML += '<div class="column_' + y + '">';
-        HTML += score[1][x][y];
-        if (score[1][x][y] === '') HTML += '0';
-        HTML += '</div>';
-      }
-      HTML += '</div>';
-    }
-    HTML += '</div><br>';
-  });
-  return HTML;
-}
-
-//////////////
-//テンポ調整機能
-//////////////
-function makeTempo(music_count) {
-  for (let i = 0; i < music_count; i++) {
-    setTimeout(makeTempoFn(i), i * 9100);
+function setTempo(musicCount) {
+  for (let count = 0; count < musicCount; count++) {
+    setTimeout(setTempoFn(count), count * 9100);
   }
 }
-//別関数
-function makeTempoFn(value) {
+function setTempoFn(count) {
   return function () {
-    sameColumnSounds(value);
+    soundSameColumn(count);
   };
 }
-//同じ拍目を鳴らしたりするモジュール
-function sameColumnSounds(num) {
+/**
+ * 同じ拍(カラム)の音を鳴らす
+ */
+function soundSameColumn(num) {
   for (let j = 0; j < 8; j++) {
     if (eval('music_order_' + num + '[' + j + "].innerHTML == '1'")) {
       eval('sound_' + j + '.play()');
@@ -315,14 +245,88 @@ function sameColumnSounds(num) {
 }
 
 /**
+ * 入力された文字をサウンドスコアにマッピングする
+ */
+function getSoundScore(inputWords) {
+  const soundScore = inputWords.split('').map((word) => {
+    const blankMapping = [
+      ['', '', '', '', '', '', '', ''], // 8px
+      ['', '', '', '', '', '', '', ''],
+      ['', '', '', '', '', '', '', ''],
+      ['', '', '', '', '', '', '', ''],
+      ['', '', '', '', '', '', '', ''],
+      ['', '', '', '', '', '', '', ''],
+      ['', '', '', '', '', '', '', ''],
+      ['', '', '', '', '', '', '', ''],
+    ];
+    return [word, blankMapping];
+  });
+
+  //入力された文字とjson(文字リスト)を照合
+  soundScore.forEach((arr) => {
+    musicalCharInfoArr.forEach((obj) => {
+      if (arr[0] === obj.jap_char) {
+        arr[2] = obj;
+      }
+    });
+  });
+
+  //入力文字数分だけスコアにbeat情報代入
+  soundScore.forEach((arr) => {
+    for (let i = 0; i < arr[2].row.length; i++) {
+      const rowANum = arr[2].row[i];
+      const columnANum = arr[2].column[i];
+      arr[1][rowANum - 1][columnANum - 1] = '1';
+    }
+  });
+  return soundScore;
+}
+/**
+ * soundScoreのデータを受け取ってHTMLを作成する
+ */
+function getVisualizedHTML(soundScore) {
+  let HTML = '';
+  soundScore.forEach((score, i) => {
+    HTML += `<div id="order_${i}">`;
+    for (let x = 0; x < 8; x++) {
+      HTML += `<div class="row_${x}">`;
+      for (let y = 0; y < 8; y++) {
+        HTML += `<div class="column_${y}">${score[1][x][y]}`;
+        if (score[1][x][y] === '') HTML += '0';
+        HTML += '</div>';
+      }
+      HTML += '</div>';
+    }
+    HTML += '</div><br>';
+  });
+  return HTML;
+}
+/**
+ * soundScoreを描画する
+ */
+function showSoundScore() {
+  d.querySelector('.wrapper').insertAdjacentHTML(
+    'beforeend',
+    getVisualizedHTML(getSoundScore(inputWords))
+  );
+}
+/**
+ * 入力したデータ詳細(文字列,文字数)の表示処理
+ */
+function showInputData() {
+  d.getElementById('js-inputWords').insertAdjacentText('beforeend', inputWords);
+  d.getElementById('js-count').insertAdjacentText(
+    'beforeend',
+    inputWordsLength
+  );
+}
+/**
  * 文字数に応じてビュー(グリッド)を調整
  */
 function optimizeGridView() {
-  d.getElementById('inputWords').insertAdjacentText('beforeend', inputWords);
-  d.getElementById('count').insertAdjacentText('beforeend', inputWordsLength);
-  //147=>左端表示 369=>真ん中表示
+  // MEMO: 147=>左端表示 369=>真ん中表示
   if ([2, 5, 8].includes(inputWordsLength)) {
-    d.getElementById('positionChanger').remove();
+    d.getElementById('js-positionChanger').remove();
   }
 }
 /**
@@ -358,7 +362,7 @@ function randomizeBackgroundView() {
 // アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘ
 // ホマミムメモヤユヨラリルレロ
 // ワヰヱヲンーァィゥェォッャュョブ
-const defaultCharJsonArr = [
+const musicalCharInfoArr = [
   {
     number: [0],
     class: 'ptc_a',

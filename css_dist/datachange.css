@@ -34,7 +34,7 @@ main {
 .information .counter {
     display: inline-flex;
   }
-.information .counter #count {
+.information .counter .counter__inner {
       font-size: 32px;
       margin-top: 21.5px;
     }

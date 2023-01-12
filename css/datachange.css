@@ -32,7 +32,7 @@ main {
   }
   & .counter {
     display: inline-flex;
-    & #count {
+    & .counter__inner {
       font-size: 32px;
       margin-top: 21.5px;
     }
