@@ -30,7 +30,7 @@ function getParam(name, url) {
  * 半角→全角(カタカナ)変換
  */
 function replaceKanaHalfToFull(str) {
-  var kanaMap = {
+  const kanaMap = {
     ｶﾞ: 'ガ',
     ｷﾞ: 'ギ',
     ｸﾞ: 'グ',
@@ -121,11 +121,9 @@ function replaceKanaHalfToFull(str) {
     '｣': '」',
     '･': '・',
   };
-  let reg = new RegExp('(' + Object.keys(kanaMap).join('|') + ')', 'g');
+  const reg = new RegExp('(' + Object.keys(kanaMap).join('|') + ')', 'g');
   return str
-    .replace(reg, function (s) {
-      return kanaMap[s];
-    })
+    .replace(reg, (s) => kanaMap[s])
     .replace(/ﾞ/g, '゛')
     .replace(/ﾟ/g, '゜');
 }
@@ -191,9 +189,7 @@ function play() {
       //music_order_にcolumnを代入してゆく
       eval(
         'music_order_' +
-          (function () {
-            return j + 8 * i;
-          })() +
+          (() => j + 8 * i)() +
           ' = words_order_' +
           i +
           ".getElementsByClassName('column_" +
@@ -215,7 +211,7 @@ function setTempo(musicCount) {
   }
 }
 function setTempoFn(count) {
-  return function () {
+  return () => {
     soundSameColumn(count);
   };
 }
