@@ -1,185 +1,164 @@
 <html>
-  <head>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-SW4VC77TR1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-SW4VC77TR1');
-    </script>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="description"
-      content="文字を利用してリズムマシン的な遊びが可能です。文字DJ"
-    />
-    <title>Script_Jockey</title>
-    <link
-      rel="shortcut icon"
-      href="img/kaiten_sitefavi.ico"
-      type="image/x-icon"
-    />
-    <link href="./css/index.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=DotGothic16|Press+Start+2P&display=swap"
-      media="print"
-      onload="this.media='all'"
-    />
-  </head>
 
-  <body>
-    <div>
-      <div class="logo_upper">
-        <p id="logo_s"></p>
-        <p id="logo_c"></p>
-        <p id="logo_r"></p>
-        <p id="logo_i"></p>
-        <p id="logo_p"></p>
-        <p id="logo_t"></p>
-      </div>
-      <div class="logo_middle">
-        <h1 id="logo_record">
-          <img src="img/kaiten_logo.png" alt="script-jockey" />
-        </h1>
-      </div>
-      <div class="logo_lower">
-        <p id="logo_j"></p>
-        <p id="logo_o"></p>
-        <p id="logo_c2"></p>
-        <p id="logo_k"></p>
-        <p id="logo_e"></p>
-        <p id="logo_y"></p>
-      </div>
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SW4VC77TR1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-SW4VC77TR1');
+  </script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="文字を利用してリズムマシン的な遊びが可能です。文字DJ" />
+  <title>Script_Jockey</title>
+  <link rel="shortcut icon" href="img/kaiten_sitefavi.ico" type="image/x-icon" />
+  <link href="./css/index.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DotGothic16|Press+Start+2P&display=swap"
+    media="print" onload="this.media='all'" />
+</head>
+
+<body>
+  <div>
+    <div id="js-logoUpper" class="logo_upper">
+      <p id="logo_s"></p>
+      <p id="logo_c"></p>
+      <p id="logo_r"></p>
+      <p id="logo_i"></p>
+      <p id="logo_p"></p>
+      <p id="logo_t"></p>
     </div>
-
-    <div class="input-part">
-      <p class="input-part__border-view"></p>
-      <form method="get" action="./datachange.htm">
-        <input
-          type="text"
-          value=""
-          placeholder="Set"
-          name="input_words"
-          pattern="^[ァ-ンヴー]+$"
-        />
-        <button type="submit">Play!</button>
-      </form>
+    <div class="logo_middle">
+      <h1 id="logo_record">
+        <img src="img/kaiten_logo.png" alt="script-jockey" />
+      </h1>
     </div>
+    <div class="logo_lower">
+      <p id="logo_j"></p>
+      <p id="logo_o"></p>
+      <p id="logo_c2"></p>
+      <p id="logo_k"></p>
+      <p id="logo_e"></p>
+      <p id="logo_y"></p>
+    </div>
+  </div>
 
-    <div class="notice">
-      <div class="notice__sentence">
-        <p
-          class="h3-like"
-          style="
+  <div class="input-part">
+    <p class="input-part__border-view"></p>
+    <form method="get" action="./datachange.htm">
+      <input type="text" value="" placeholder="Set" name="input_words" pattern="^[ァ-ンヴー]+$" />
+      <button type="submit">Play!</button>
+    </form>
+  </div>
+
+  <div class="notice">
+    <div class="notice__sentence">
+      <p class="h3-like" style="
             color: red;
             font-size: 20px;
             margin: 0 0 30px 0;
             padding-top: 15px;
-          "
-        >
-          Notice
-        </p>
-        <p class="h3-like" style="color: red">This content makes some sounds</p>
-        <p class="h3-like">　and only works in Google Chrome.</p>
-        <p class="h3-like">The maximum number of CHARs : 9</p>
-        <p class="h3-like">　(Short word is recommended.)</p>
-        <p class="h3-like" style="padding-bottom: 20px">
-          You can use only listed "カタカナ".
-        </p>
-      </div>
+          ">
+        Notice
+      </p>
+      <p class="h3-like" style="color: red">This content makes some sounds</p>
+      <p class="h3-like">　and only works in Google Chrome.</p>
+      <p class="h3-like">The maximum number of CHARs : 9</p>
+      <p class="h3-like">　(Short word is recommended.)</p>
+      <p class="h3-like" style="padding-bottom: 20px">
+        You can use only listed "カタカナ".
+      </p>
     </div>
+  </div>
 
-    <p class="h3-like" style="margin: 15px 0 30px 0; text-align: center">
-      ↓ List ↓
-    </p>
+  <p class="h3-like" style="margin: 15px 0 30px 0; text-align: center">
+    ↓ List ↓
+  </p>
 
-    <div class="list">
-      <p class="list__item">ア</p>
-      <p class="list__item">イ</p>
-      <p class="list__item">ウ</p>
-      <p class="list__item">エ</p>
-      <p class="list__item">オ</p>
+  <div class="list">
+    <p class="list__item">ア</p>
+    <p class="list__item">イ</p>
+    <p class="list__item">ウ</p>
+    <p class="list__item">エ</p>
+    <p class="list__item">オ</p>
 
-      <p class="list__item">カ</p>
-      <p class="list__item">キ</p>
-      <p class="list__item">ク</p>
-      <p class="list__item">ケ</p>
-      <p class="list__item">コ</p>
+    <p class="list__item">カ</p>
+    <p class="list__item">キ</p>
+    <p class="list__item">ク</p>
+    <p class="list__item">ケ</p>
+    <p class="list__item">コ</p>
 
-      <p class="list__item">サ</p>
-      <p class="list__item list__item--orange">シ</p>
-      <p class="list__item">ス</p>
-      <p class="list__item">セ</p>
-      <p class="list__item">ソ</p>
+    <p class="list__item">サ</p>
+    <p class="list__item list__item--orange">シ</p>
+    <p class="list__item">ス</p>
+    <p class="list__item">セ</p>
+    <p class="list__item">ソ</p>
 
-      <p class="list__item">タ</p>
-      <p class="list__item">チ</p>
-      <p class="list__item">ツ</p>
-      <p class="list__item">テ</p>
-      <p class="list__item">ト</p>
+    <p class="list__item">タ</p>
+    <p class="list__item">チ</p>
+    <p class="list__item">ツ</p>
+    <p class="list__item">テ</p>
+    <p class="list__item">ト</p>
 
-      <p class="list__item">ナ</p>
-      <p class="list__item">ニ</p>
-      <p class="list__item">ヌ</p>
-      <p class="list__item">ネ</p>
-      <p class="list__item">ノ</p>
+    <p class="list__item">ナ</p>
+    <p class="list__item">ニ</p>
+    <p class="list__item">ヌ</p>
+    <p class="list__item">ネ</p>
+    <p class="list__item">ノ</p>
 
-      <p class="list__item">ハ</p>
-      <p class="list__item">ヒ</p>
-      <p class="list__item">フ</p>
-      <p class="list__item">ヘ</p>
-      <p class="list__item">ホ</p>
+    <p class="list__item">ハ</p>
+    <p class="list__item">ヒ</p>
+    <p class="list__item">フ</p>
+    <p class="list__item">ヘ</p>
+    <p class="list__item">ホ</p>
 
-      <p class="list__item">マ</p>
-      <p class="list__item">ミ</p>
-      <p class="list__item">ム</p>
-      <p class="list__item">メ</p>
-      <p class="list__item">モ</p>
+    <p class="list__item">マ</p>
+    <p class="list__item">ミ</p>
+    <p class="list__item">ム</p>
+    <p class="list__item">メ</p>
+    <p class="list__item">モ</p>
 
-      <p class="list__item list__item--orange">ヤ</p>
-      <p class="list__item">ユ</p>
-      <p class="list__item">ヨ</p>
+    <p class="list__item list__item--orange">ヤ</p>
+    <p class="list__item">ユ</p>
+    <p class="list__item">ヨ</p>
 
-      <p class="list__item">ラ</p>
-      <p class="list__item">リ</p>
-      <p class="list__item">ル</p>
-      <p class="list__item">レ</p>
-      <p class="list__item">ロ</p>
+    <p class="list__item">ラ</p>
+    <p class="list__item">リ</p>
+    <p class="list__item">ル</p>
+    <p class="list__item">レ</p>
+    <p class="list__item">ロ</p>
 
-      <p class="list__item">ワ</p>
-      <p class="list__item">ヰ</p>
-      <p class="list__item">ヱ</p>
-      <p class="list__item">ヲ</p>
+    <p class="list__item">ワ</p>
+    <p class="list__item">ヰ</p>
+    <p class="list__item">ヱ</p>
+    <p class="list__item">ヲ</p>
 
-      <p class="list__item">ン</p>
-      <p class="list__item">ー</p>
+    <p class="list__item">ン</p>
+    <p class="list__item">ー</p>
 
-      <p class="list__item">ァ</p>
-      <p class="list__item">ィ</p>
-      <p class="list__item">ゥ</p>
-      <p class="list__item">ェ</p>
-      <p class="list__item">ォ</p>
+    <p class="list__item">ァ</p>
+    <p class="list__item">ィ</p>
+    <p class="list__item">ゥ</p>
+    <p class="list__item">ェ</p>
+    <p class="list__item">ォ</p>
 
-      <p class="list__item">ッ</p>
+    <p class="list__item">ッ</p>
 
-      <p class="list__item">ャ</p>
-      <p class="list__item">ュ</p>
-      <p class="list__item">ョ</p>
+    <p class="list__item">ャ</p>
+    <p class="list__item">ュ</p>
+    <p class="list__item">ョ</p>
 
-      <p class="list__item list__item--orange">ブ</p>
-    </div>
+    <p class="list__item list__item--orange">ブ</p>
+  </div>
 
-    <footer style="text-align: center">
-      <p class="h3-like" style="margin: 5px 0">-------------------</p>
-      <p class="h3-like">© 2019</p>
-    </footer>
-  </body>
+  <footer style="text-align: center">
+    <p class="h3-like" style="margin: 5px 0">-------------------</p>
+    <p class="h3-like">© 2019</p>
+  </footer>
+</body>
+
 </html>

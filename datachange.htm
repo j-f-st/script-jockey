@@ -1,77 +1,66 @@
 <html>
-  <head>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-SW4VC77TR1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-SW4VC77TR1');
-    </script>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="description"
-      content="文字を利用してリズムマシン的な遊びが可能です。文字DJ"
-    />
-    <title>Script_Jockey_Playing</title>
-    <link
-      rel="shortcut icon"
-      href="img/kaiten_sitefavi.ico"
-      type="image/x-icon"
-    />
-    <link href="./css/datachange.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=DotGothic16|Press+Start+2P&display=swap"
-      media="print"
-      onload="this.media='all'"
-    />
-  </head>
-  <body>
-    <!-- block for background -->
-    <div id="js-backgroundLeft" class="background-left"></div>
-    <div id="js-backgroundRight" class="background-right"></div>
 
-    <main>
-      <div class="information">
-        <h1>
-          words:
-          <span id="js-inputWords"></span>
-        </h1>
-        <div class="counter">
-          <h1>count:</h1>
-          <div id="js-count" class="counter__inner"></div>
-        </div>
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SW4VC77TR1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-SW4VC77TR1');
+  </script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="文字を利用してリズムマシン的な遊びが可能です。文字DJ" />
+  <title>Script_Jockey_Playing</title>
+  <link rel="shortcut icon" href="img/kaiten_sitefavi.ico" type="image/x-icon" />
+  <link href="./css/datachange.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DotGothic16|Press+Start+2P&display=swap"
+    media="print" onload="this.media='all'" />
+</head>
+
+<body>
+  <!-- block for background -->
+  <div id="js-backgroundLeft" class="background-left"></div>
+  <div id="js-backgroundRight" class="background-right"></div>
+
+  <main>
+    <div class="information">
+      <h1>
+        words:
+        <span id="js-inputWords"></span>
+      </h1>
+      <div class="counter">
+        <h1>count:</h1>
+        <div id="js-count" class="counter__inner"></div>
       </div>
+    </div>
 
-      <div class="wrapper"></div>
+    <div class="wrapper"></div>
 
-      <div id="js-positionChanger" style="width: 192px; height: 192px"></div>
+    <div id="js-positionChanger" style="width: 192px; height: 192px"></div>
 
-      <div class="track-list">
-        <h2>S<i>o</i><i>u</i><i>n</i><i>d</i><i>I</i><i>n</i>spiredBy</h2>
-        <ul>
-          <li>0 Yebisu</li>
-          <li>1 Moyai</li>
-          <li>2 Hachiko</li>
-          <li>3 Crowded</li>
-          <li>4 Policeman</li>
-          <li>5 Meiji Jingu</li>
-          <li>6 Sasazuka bowl</li>
-          <li>7 Club beat</li>
-        </ul>
-      </div>
-      <!-- last one | track-list -->
+    <div class="track-list">
+      <h2>S<i>o</i><i>u</i><i>n</i><i>d</i><i>I</i><i>n</i>spiredBy</h2>
+      <ul>
+        <li>0 Yebisu</li>
+        <li>1 Moyai</li>
+        <li>2 Hachiko</li>
+        <li>3 Crowded</li>
+        <li>4 Policeman</li>
+        <li>5 Meiji Jingu</li>
+        <li>6 Sasazuka bowl</li>
+        <li>7 Club beat</li>
+      </ul>
+    </div>
+    <!-- last one | track-list -->
 
-      <a class="back2top" href="index.htm"><span> <- </span>top</a>
-    </main>
-  </body>
-  <script src="./datachange.js"></script>
+    <a class="back2top" href="index.htm"><span> <- </span>top</a>
+  </main>
+</body>
+<script src="./datachange.js"></script>
+
 </html>
