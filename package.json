@@ -6,7 +6,7 @@
 		"format": "biome check --write ."
 	},
 	"volta": {
-		"node": "20.12.2",
+		"node": "20.19.3",
 		"yarn": "4.5.3"
 	},
 	"devDependencies": {
